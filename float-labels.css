@@ -1,0 +1,38 @@
+/*
+float-labels.css v1
+by Adam Culpepper | @adamculpepper
+https://github.com/adamculpepper/float-label.css
+*/
+
+.has-float-label {position:relative;}
+
+.has-float-label label {
+	position:absolute;
+	left:1rem; /* get accurate value from BS4 */
+	top:0.3rem;
+	color:blue;
+	transition:all 200ms;
+	font-size:0.75rem;
+	opacity:1;
+	cursor:text;
+	-webkit-touch-callout:none; /* iOS Safari */
+	  -webkit-user-select:none; /* Safari */
+	   -khtml-user-select:none; /* Konqueror HTML */
+	     -moz-user-select:none; /* Old versions of Firefox */
+	      -ms-user-select:none; /* Internet Explorer/Edge */
+	          user-select:none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus) + label {
+	font-size:1rem;
+	opacity:.5;
+	top:50%;
+	transform:translateY(-50%);
+	color:inherit;
+}
+
+.has-float-label ::-webkit-input-placeholder {color:transparent!important;}
+.has-float-label :-moz-placeholder {color:transparent!important;} /* Firefox 18- */
+.has-float-label ::-moz-placeholder {color:transparent!important;} /* Firefox 19+ */
+.has-float-label :-ms-input-placeholder {color:transparent!important;}
+.has-float-label ::placeholder {color:transparent!important;}
