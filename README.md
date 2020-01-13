@@ -1,4 +1,4 @@
-# float-label.css - Float Labels for Bootstrap4 (with Select2 support)
+# Float Labels for Bootstrap4 (with Select2 support)
 
 ## Features
 - Pure CSS only Float Label
