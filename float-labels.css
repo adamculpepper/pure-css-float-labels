@@ -1,5 +1,5 @@
 /*
-float-labels.css v1
+float-labels.css v1.1
 by Adam Culpepper | @adamculpepper
 https://github.com/adamculpepper/float-label.css
 */
@@ -7,13 +7,14 @@ https://github.com/adamculpepper/float-label.css
 .has-float-label {position:relative;}
 
 .has-float-label label {
-	position:absolute;
-	left:1rem; /* get accurate value from BS4 */
-	top:0.3rem;
-	color:blue;
-	transition:all 200ms;
-	font-size:0.75rem;
 	opacity:1;
+	position:absolute;
+	left:0.75rem;
+	top:0.2rem;
+	font-size:0.75rem;
+	transition:all 0.3s;
+	color:blue;
+	margin-bottom:0;
 	cursor:text;
 	-webkit-touch-callout:none; /* iOS Safari */
 	  -webkit-user-select:none; /* Safari */
@@ -23,11 +24,13 @@ https://github.com/adamculpepper/float-label.css
 	          user-select:none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
 }
 
+.has-float-label .form-control {padding-top:19px;}
+
 .has-float-label .form-control:placeholder-shown:not(:focus) + label {
-	font-size:1rem;
-	opacity:.5;
+	opacity:0.50;
 	top:50%;
 	transform:translateY(-50%);
+	font-size:1rem;
 	color:inherit;
 }
 
@@ -36,3 +39,55 @@ https://github.com/adamculpepper/float-label.css
 .has-float-label ::-moz-placeholder {color:transparent!important;} /* Firefox 19+ */
 .has-float-label :-ms-input-placeholder {color:transparent!important;}
 .has-float-label ::placeholder {color:transparent!important;}
+
+/* Missing placeholder error message */
+.has-float-label input[placeholder = ''], 
+.has-float-label input:not([placeholder]) {border:1px solid red;}
+.has-float-label input[placeholder = ''] + label:after,
+.has-float-label input:not([placeholder]) + label:after {content:'input placeholder missing!'; margin-left:10px; color:red;}
+
+/* ------------------------------ */
+
+/* Select2 Support */
+
+/* Normalize Select2 for Bootstrap 4 */
+.has-float-label.has-select2 .select2-container {position:relative;}
+.has-float-label.has-select2 .select2-container--default .select2-selection--single {height:auto; border:0;}
+.has-float-label.has-select2 .select2-container--default .select2-selection--single .select2-selection__rendered {height:44px; line-height:44px; padding:.375rem .75rem; border:1px solid rgba(0, 0, 0, 0.20); border-radius:4px;}
+
+.has-float-label.has-select2 label.select2-float-label {
+	opacity:1;
+	position:absolute;
+	left:0.75rem;
+	top:50%;
+	transform:translateY(-50%);
+	font-size:1rem;
+	transition:all 0.3s;
+	color:#bbb;
+	margin-bottom:0;
+	pointer-events:none;
+}
+
+.has-float-label.has-select2 .select2-selection__placeholder {
+	position:absolute;
+	top:50%;
+	transform:translateY(-50%);
+}
+
+.has-float-label.has-select2 .select2-has-value label.select2-float-label,
+.has-float-label.has-select2 .select2-container--open label.select2-float-label {
+	top:12px; /* why is this value different? */
+	font-size:0.75rem;
+	color:blue;
+}
+
+/* Hide Select2's placeholder since we're taking care of the placeholder from here on */
+.has-float-label.has-select2 .select2-has-opened .select2-selection__placeholder,
+.has-float-label.has-select2 .select2-container--open .select2-selection__placeholder {opacity:0;}
+
+
+/* TODO */
+/* get normal <select> elements working */
+/* get <textarea> elements working */
+/* error handling for select2 missing placeholder or label */
+/* suppert for clearing the select2 value using jQuery (doesn't trigger change event this way) */

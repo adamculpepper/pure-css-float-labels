@@ -1,0 +1,148 @@
+<script>
+$(function() {
+
+	$('#select2-element').select2({
+		//placeholder: 'Select Name'
+	}).on('change select2:opening', function(e) {
+		if ($(this).val() != null) {
+			$(this).parent().find('.select2-container').addClass('select2-has-value');
+		} else {
+			$(this).parent().find('.select2-container').removeClass('select2-has-value');
+		}
+	}).on('select2:opening', function(e) {
+		var placeholder = $(this).parent().find('.select2-selection__placeholder').text() || $(this).parent().find('label').text();
+		var el = $(this).parent().find('.select2-container');
+
+		$(this).parent().find('label:not(.select2-float-label)').hide();
+
+		if (el.find('label.select2-float-label').length == 0) {
+			el.addClass('select2-has-opened').append('<label class="select2-float-label">' + placeholder + '</label>');
+		}
+	});
+
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+<div class="col-6">
+	<div class="form-group">
+		<div class="has-float-label">
+			<input type="text" id="name" class="form-control" placeholder=".">
+			<label for="name">Blank Input</label>
+		</div>
+	</div>
+</div>
+
+<div class="col-6">
+	<div class="form-group">
+		<div class="has-float-label">
+			<input type="text" id="name" class="form-control" placeholder="." value="John Smith">
+			<label for="name">Filled out input</label>
+		</div>
+	</div>
+</div>
+
+<div class="col-6">
+	<div class="form-group">
+		<div class="has-float-label">
+			<input type="email" id="type-email" class="form-control" placeholder=".">
+			<label for="type-email">type="email"</label>
+		</div>
+	</div>
+</div>
+
+<div class="col-6">
+	<div class="form-group">
+		<div class="has-float-label">
+			<input type="password" id="type-password" class="form-control" placeholder=".">
+			<label for="type-password">type="password"</label>
+		</div>
+	</div>
+</div>
+
+<div class="col-6">
+	<div class="form-group">
+		<div class="has-float-label">
+			<input type="email" id="email" class="form-control">
+			<label for="email">No placeholder attribute</label>
+		</div>
+	</div>
+</div>
+
+<div class="col-6">
+	<div class="form-group">
+		<div class="has-float-label">
+			<input type="email" id="email" class="form-control" value="example@something.com">
+			<label for="email">No placeholder attribute + has value</label>
+		</div>
+	</div>
+</div>
+
+<div class="col-6">
+	<div class="form-group">
+		<div class="has-float-label">
+			<input type="text" id="name" class="form-control" placeholder="">
+			<label for="name">Blank placeholder attribute</label>
+		</div>
+	</div>
+</div>
+
+<div class="col-6">
+	<div class="form-group">
+		<div class="has-float-label">
+			<select id="select-element" class="form-control">
+				<option></option>
+				<option value="1">Test Person 1</option>
+				<option value="2">Test Person 2</option>
+				<option value="3">Test Person 3</option>
+				<option value="4">Test Person 4</option>
+				<option value="5">Test Person 5</option>
+				<option value="6">Test Person 6</option>
+				<option value="7">Test Person 7</option>
+				<option value="8">Test Person 8</option>
+				<option value="9">Test Person 9</option>
+				<option value="10">Test Person 10</option>
+			</select>
+			<label for="select-element" placeholder=".">Select Person</label>
+		</div>
+	</div>
+</div>
+
+
+<div class="col-6">
+	<div class="form-group">
+		<div class="has-float-label has-select2">
+			<select class="form-control select2">
+				<option></option>
+				<option value="1">Test Person 1</option>
+				<option value="2">Test Person 2</option>
+				<option value="3">Test Person 3</option>
+				<option value="4">Test Person 4</option>
+				<option value="5">Test Person 5</option>
+				<option value="6">Test Person 6</option>
+				<option value="7">Test Person 7</option>
+				<option value="8">Test Person 8</option>
+				<option value="9">Test Person 9</option>
+				<option value="10">Test Person 10</option>
+			</select>
+		</div>
+	</div>
+</div>
+
+
+<div class="col-6">
+	<div class="form-group">
+		<div class="has-float-label">
+			<textarea id="textarea-element" placeholder="Textarea Element" rows="3" style="width:100%;"></textarea>
+			<label for="" id="textarea-element">Textarea Element</label>
+		</div>
+	</div>
+</div>
