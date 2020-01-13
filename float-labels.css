@@ -1,5 +1,5 @@
 /*
-float-labels.css v1.1
+float-labels.css v1.2
 by Adam Culpepper | @adamculpepper
 https://github.com/adamculpepper/float-label.css
 */
@@ -34,6 +34,8 @@ https://github.com/adamculpepper/float-label.css
 	color:inherit;
 }
 
+.has-float-label textarea.form-control:placeholder-shown:not(:focus) + label {top:1.5rem;}
+
 .has-float-label ::-webkit-input-placeholder {color:transparent!important;}
 .has-float-label :-moz-placeholder {color:transparent!important;} /* Firefox 18- */
 .has-float-label ::-moz-placeholder {color:transparent!important;} /* Firefox 19+ */
@@ -41,10 +43,10 @@ https://github.com/adamculpepper/float-label.css
 .has-float-label ::placeholder {color:transparent!important;}
 
 /* Missing placeholder error message */
-.has-float-label input[placeholder = ''], 
-.has-float-label input:not([placeholder]) {border:1px solid red;}
-.has-float-label input[placeholder = ''] + label:after,
-.has-float-label input:not([placeholder]) + label:after {content:'input placeholder missing!'; margin-left:10px; color:red;}
+.has-float-label input.form-control[placeholder = ''], 
+.has-float-label input.form-control:not([placeholder]) {border:1px solid red;}
+.has-float-label input.form-control[placeholder = ''] + label:after,
+.has-float-label input.form-control:not([placeholder]) + label:after {content:'input placeholder missing!'; margin-left:10px; color:red;}
 
 /* ------------------------------ */
 
@@ -84,10 +86,3 @@ https://github.com/adamculpepper/float-label.css
 /* Hide Select2's placeholder since we're taking care of the placeholder from here on */
 .has-float-label.has-select2 .select2-has-opened .select2-selection__placeholder,
 .has-float-label.has-select2 .select2-container--open .select2-selection__placeholder {opacity:0;}
-
-
-/* TODO */
-/* get normal <select> elements working */
-/* get <textarea> elements working */
-/* error handling for select2 missing placeholder or label */
-/* suppert for clearing the select2 value using jQuery (doesn't trigger change event this way) */
