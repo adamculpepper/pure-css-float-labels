@@ -12,3 +12,5 @@
 - error handling for select2 missing placeholder or label
 - suppert for clearing the select2 value using jQuery (doesn't trigger change event this way)
 - link to float label pattern here and dribbble post
+
+Original Floar Label pattern creator: https://dribbble.com/shots/1254439--GIF-Float-Label-Form-Interaction
