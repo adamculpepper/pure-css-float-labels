@@ -1,21 +1,21 @@
 /*
-float-labels.css v1.2
+float-labels.css v1.3
 by Adam Culpepper | @adamculpepper
 https://github.com/adamculpepper/float-label.css
 */
 
 .has-float-label {position:relative;}
-
 .has-float-label label {
-	opacity:1;
+	opacity:0.70;
 	position:absolute;
-	left:0.75rem;
-	top:0.2rem;
+	left:0.85rem;
+	top:0.20rem;
 	font-size:0.75rem;
-	transition:all 0.3s;
+	transition:all 0.30s;
 	color:blue;
 	margin-bottom:0;
 	cursor:text;
+	pointer-events:none;
 	-webkit-touch-callout:none; /* iOS Safari */
 	  -webkit-user-select:none; /* Safari */
 	   -khtml-user-select:none; /* Konqueror HTML */
@@ -23,9 +23,7 @@ https://github.com/adamculpepper/float-label.css
 	      -ms-user-select:none; /* Internet Explorer/Edge */
 	          user-select:none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
 }
-
-.has-float-label .form-control {padding-top:19px;}
-
+.has-float-label .form-control {padding-top:15px; padding-bottom:0;}
 .has-float-label .form-control:placeholder-shown:not(:focus) + label {
 	opacity:0.50;
 	top:50%;
@@ -34,8 +32,15 @@ https://github.com/adamculpepper/float-label.css
 	color:inherit;
 }
 
+/* Textarea elements*/
 .has-float-label textarea.form-control:placeholder-shown:not(:focus) + label {top:1.5rem;}
 
+/* Select elements*/
+.has-float-label select.form-control {padding-left:0.50rem;}
+.has-float-label select.form-control:placeholder-shown:not(:focus) + label {top:1.5rem;}
+.has-float-label select.form-control option[value=""][disabled] {display:none;}
+
+/* Hide placeholders since we're taking care of those with label elements */
 .has-float-label ::-webkit-input-placeholder {color:transparent!important;}
 .has-float-label :-moz-placeholder {color:transparent!important;} /* Firefox 18- */
 .has-float-label ::-moz-placeholder {color:transparent!important;} /* Firefox 19+ */
@@ -54,17 +59,17 @@ https://github.com/adamculpepper/float-label.css
 
 /* Normalize Select2 for Bootstrap 4 */
 .has-float-label.has-select2 .select2-container {position:relative;}
-.has-float-label.has-select2 .select2-container--default .select2-selection--single {height:auto; border:0;}
-.has-float-label.has-select2 .select2-container--default .select2-selection--single .select2-selection__rendered {height:44px; line-height:44px; padding:.375rem .75rem; border:1px solid rgba(0, 0, 0, 0.20); border-radius:4px;}
+.has-float-label.has-select2 .select2-container .select2-selection {height:auto; border:0;}
+.has-float-label.has-select2 .select2-container .select2-selection .select2-selection__rendered {height:44px; line-height:44px; padding:.375rem .75rem; border:1px solid rgba(0, 0, 0, 0.20); border-radius:4px;}
 
 .has-float-label.has-select2 label.select2-float-label {
 	opacity:1;
 	position:absolute;
-	left:0.75rem;
+	left:0.85rem;
 	top:50%;
 	transform:translateY(-50%);
 	font-size:1rem;
-	transition:all 0.3s;
+	transition:all 0.30s;
 	color:#bbb;
 	margin-bottom:0;
 	pointer-events:none;

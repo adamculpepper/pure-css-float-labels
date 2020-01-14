@@ -101,23 +101,15 @@ $(function() {
 		</div>
 
 		<div class="col-6">
-			<div class="form-group">
-				<div class="has-float-label">
-					<select id="select-element" class="form-control">
-						<option></option>
-						<option value="1">Test Person 1</option>
-						<option value="2">Test Person 2</option>
-						<option value="3">Test Person 3</option>
-						<option value="4">Test Person 4</option>
-						<option value="5">Test Person 5</option>
-						<option value="6">Test Person 6</option>
-						<option value="7">Test Person 7</option>
-						<option value="8">Test Person 8</option>
-						<option value="9">Test Person 9</option>
-						<option value="10">Test Person 10</option>
-					</select>
-					<label for="select-element" placeholder=".">Select Person</label>
-				</div>
+			<div class="form-group has-float-label has-required">
+				<select class="form-control" id="field-company-type">
+					<option value="" disabled selected>- SELECT -</option>
+					<option value="1">Customer</option>
+					<option value="2">Lead</option>
+					<option value="3">Sales</option>
+					<option value="4">Homeless</option>
+				</select>
+				<label for="field-company-type">Company Type</label>
 			</div>
 		</div>
 
