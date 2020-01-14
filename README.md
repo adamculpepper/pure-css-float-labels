@@ -3,7 +3,7 @@
 Float Labels for Bootstrap4 (with Select2 support)
 
 ## Features
-- Pure CSS only Float Label
+- Pure CSS only Float Labels
 - Support for Select2 (with some JS needed to be added)
 - error handling for missing pieces needed to get the float label working
 
