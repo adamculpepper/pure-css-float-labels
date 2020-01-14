@@ -4,6 +4,7 @@ Float Labels for Bootstrap4 (with support for `<input>`, `<select>`, `<textarea>
 
 ## Features
 - Pure CSS only Float Labels
+- Support for `<input>`, `<select>`, `<textarea>`
 - Support for Select2 (with some JS needed to be added)
 - error handling for missing pieces needed to get the float label working
 
