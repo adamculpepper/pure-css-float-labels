@@ -1,7 +1,7 @@
 /*
-float-labels.css v1.3
+pure-css-float-labels v1.4
 by Adam Culpepper | @adamculpepper
-https://github.com/adamculpepper/float-label.css
+https://github.com/adamculpepper/pure-css-float-labels
 */
 
 .has-float-label {position:relative;}
@@ -47,11 +47,19 @@ https://github.com/adamculpepper/float-label.css
 .has-float-label :-ms-input-placeholder {color:transparent!important;}
 .has-float-label ::placeholder {color:transparent!important;}
 
-/* Missing placeholder error message */
-.has-float-label input.form-control[placeholder = ''], 
-.has-float-label input.form-control:not([placeholder]) {border:1px solid red;}
+/* Missing placeholder error messages */
+.has-float-label input.form-control[placeholder = ''],
+.has-float-label input.form-control:not([placeholder]),
+.has-float-label textarea.form-control[placeholder = ''],
+.has-float-label textarea.form-control:not([placeholder]) {border:1px solid red;}
 .has-float-label input.form-control[placeholder = ''] + label:after,
-.has-float-label input.form-control:not([placeholder]) + label:after {content:'input placeholder missing!'; margin-left:10px; color:red;}
+.has-float-label input.form-control:not([placeholder]) + label:after,
+.has-float-label textarea.form-control[placeholder = ''] + label:after,
+.has-float-label textarea.form-control:not([placeholder]) + label:after {margin-left:10px; color:red;}
+.has-float-label input.form-control[placeholder = ''] + label:after,
+.has-float-label input.form-control:not([placeholder]) + label:after {content:'input placeholder missing!';}
+.has-float-label textarea.form-control[placeholder = ''] + label:after,
+.has-float-label textarea.form-control:not([placeholder]) + label:after {content:'textarea placeholder missing!';}
 
 /* ------------------------------ */
 
