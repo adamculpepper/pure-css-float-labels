@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Toggle Switchy - A pure CSS toggle switch for form input checkboxes</title>
+		<meta name="author" content="Toggle Switchy">
+		<meta name="description" content="A pure CSS toggle switch for form input checkboxes">
+		<!-- <link href="/favicon.ico" rel="shortcut icon"> -->
+		<!-- <link href="/favicon.png" rel="apple-touch-icon-precomposed"> -->
+
+		<!-- styles -->
+		<link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css">
+		<link rel="stylesheet" media="screen" href="./assets/libs/prism/prism.css">
+		<link rel="stylesheet" media="screen" href="../float-labels.css">
+		<!-- <link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/adamculpepper/toggle-switchy@latest/docs/assets/css/custom.css"> -->
+		<link rel="stylesheet" media="screen" href="./assets/css/custom.css">
+
+		<!-- open graph meta -->
+		<meta property="og:title" content="Toggle Switchy">
+		<meta property="og:site_name" content="Toggle Switchy">
+		<meta property="og:description" content="A pure CSS toggle switch for form input checkboxes">
+		<meta property="og:url" content="https://adamculpepper.github.io/toggle-switchy">
+		<meta property="og:image" content="http://adamculpepper.net/repos/preview-toggle-switchy.png">
+		<meta name="twitter:image" content="http://adamculpepper.net/repos/preview-toggle-switchy.png">
+
+		<!--
+		<script>
+		$(function() {
+			$('#select2-element').select2({
+				//placeholder: 'Select Name'
+			}).on('change select2:opening', function(e) {
+				if ($(this).val() != null) {
+					$(this).parent().find('.select2-container').addClass('select2-has-value');
+				} else {
+					$(this).parent().find('.select2-container').removeClass('select2-has-value');
+				}
+			}).on('select2:opening', function(e) {
+				var placeholder = $(this).parent().find('.select2-selection__placeholder').text() || $(this).parent().find('label').text();
+				var el = $(this).parent().find('.select2-container');
+
+				$(this).parent().find('label:not(.select2-float-label)').hide();
+
+				if (el.find('label.select2-float-label').length == 0) {
+					el.addClass('select2-has-opened').append('<label class="select2-float-label">' + placeholder + '</label>');
+				}
+			});
+		});
+		</script>
+	-->
+
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-12 py-3">
+						<div class="row">
+							<div class="col-lg-9">
+								<h1>Pure CSS Float Labels<span class="h5 ml-2">v1.5</span></h1>
+								<h2 class="h4">Pure CSS Float Labels for Bootstrap4 (with Select2 support)</h2>
+							</div>
+							<div class="col-lg-3 d-block d-lg-flex align-items-center mt-4 mt-lg-0">
+								<div class="d-inline-block text-center ml-auto">
+									<a class="btn btn-primary ml-auto d-block" href="https://github.com/adamculpepper/toggle-switchy">Edit on Github</a>
+									Docs in README
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="content" class="container mt-4">
+			<div class="row mb-4">
+				<div class="col-12">
+					<div class="row">
+						<div class="col-12">
+							<h2>Demos</h2>
+						</div>
+
+						<div class="col-4">
+							<div class="card">
+								<div class="card-header">Input Field</div>
+								<div class="card-body">
+									<div class="form-group">
+										<div class="has-float-label">
+											<input type="text" id="full-name" class="form-control" placeholder=".">
+											<label for="full-name">Full Name</label>
+										</div>
+									</div>
+									<div class="form-group mb-0">
+<pre>
+<code class="language-html">
+&lt;div class="has-float-label"&gt;
+	&lt;input type="text" id="name" class="form-control" placeholder="."&gt;
+	&lt;label for="name"&gt;Blank Input&lt;/label&gt;
+&lt;/div&gt;
+</code>
+</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="card">
+								<div class="card-header">Select</div>
+								<div class="card-body">
+									<div class="form-group">
+										<div class="has-float-label">
+											<select id="field-select" class="form-control">
+												<option selected disabled>- SELECT -</option>
+												<option value="option1">Option 1</option>
+												<option value="option2">Option 2</option>
+												<option value="option3" disabled>Option 3</option>
+												<option value="option4">Option 4</option>
+												<option value="option5">Option 5</option>
+											</select>
+											<label for="field-select">Full Name</label>
+										</div>
+									</div>
+									<div class="form-group mb-0">
+										<textarea rows="4">
+										<div class="has-float-label">
+											<input type="text" id="name" class="form-control" placeholder=".">
+											<label for="name">Blank Input</label>
+										</div>
+										</textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="card">
+								<div class="card-header">Textarea</div>
+								<div class="card-body">
+									<div class="form-group">
+										<div class="has-float-label">
+											<textarea type="text" id="full-name" class="form-control" placeholder="."></textarea>
+											<label for="full-name">Full Name</label>
+										</div>
+									</div>
+									<div class="form-group mb-0">
+										<textarea rows="4">
+										<div class="has-float-label">
+											<input type="text" id="name" class="form-control" placeholder=".">
+											<label for="name">Blank Input</label>
+										</div>
+										</textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="row">
+				<div class="col-12">
+					<h2>Tests</h2>
+				</div>
+
+				<div class="col-6">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="email" id="type-email" class="form-control" placeholder=".">
+							<label for="type-email">type="email"</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="password" id="type-password" class="form-control" placeholder=".">
+							<label for="type-password">type="password"</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="email" id="email" class="form-control">
+							<label for="email">No placeholder attribute</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="email" id="email" class="form-control" value="example@something.com">
+							<label for="email">No placeholder attribute + has value</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="name" class="form-control" placeholder="">
+							<label for="name">Blank placeholder attribute</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="name" class="form-control" placeholder="" value="value here">
+							<label for="name">Blank placeholder attribute + has value</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="form-group has-float-label has-required">
+						<select class="form-control" id="field-company-type">
+							<option value="" disabled selected>- SELECT -</option>
+							<option value="1">Customer</option>
+							<option value="2">Lead</option>
+							<option value="3">Sales</option>
+							<option value="4">Homeless</option>
+						</select>
+						<label for="field-company-type">Company Type</label>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="form-group">
+						<div class="has-float-label has-select2">
+							<select class="form-control select2" id="select2-element">
+								<!-- <option></option> -->
+								<option value="1">Test Person 1</option>
+								<option value="2">Test Person 2</option>
+								<option value="3">Test Person 3</option>
+								<option value="4">Test Person 4</option>
+								<option value="5">Test Person 5</option>
+								<option value="6">Test Person 6</option>
+								<option value="7">Test Person 7</option>
+								<option value="8">Test Person 8</option>
+								<option value="9">Test Person 9</option>
+								<option value="10">Test Person 10</option>
+							</select>
+							<label for="">fsasadsfs</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="form-group">
+						<div class="has-float-label">
+							<textarea id="textarea-element" class="form-control" placeholder="Textarea Element" rows="3" style="width:100%;"></textarea>
+							<label for="" id="textarea-element">Textarea Element, no value</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<div class="form-group">
+						<div class="has-float-label">
+							<textarea id="textarea-element" class="form-control" placeholder="Textarea Element" rows="3" style="width:100%;">Textarea with value</textarea>
+							<label for="" id="textarea-element">Textarea Element with value</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="d-lg-flex">
+				<div class="d-block d-md-inline-block mb-3 mb-md-0">
+					<a href="/">Pure CSS Float Labels</a>
+				</div>
+				<span class="ml-2 hidden-sm-down">is</span>
+				<span class="ml-2"><i class="fas fa-code"></i><span class="sr-only">built</span></span>
+				<span class="ml-2">with</span>
+				<span class="ml-2"><i class="fas fa-heart"></i><span class="sr-only">love</span></span>
+				<span class="ml-2">by</span>
+				<a class="ml-1" target="_blank" rel="referrer nofollow" href="http://adamculpepper.net"><img class="rounded-circle" src="https://cdn.louisianagroups.com/assets/img/adam.jpg" alt="Contributor"></a>
+				<div class="d-block d-lg-inline-block mt-3 mt-lg-0 ml-auto">
+					<a target="_blank" href="https://github.com/adamculpepper/toggle-switchy">edit this page<i class="fab fa-github ml-2"></i></a>
+				</div>
+			</div>
+		</footer>
+
+		<!--
+		<script async src="https://googletagmanager.com/gtag/js?id=UA-450952-13"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-450952-13');
+		</script>
+ 		-->
+
+		<script src="./assets/libs/prism/prism.min.js"></script>
+
+	</body>
+</html>

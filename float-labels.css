@@ -28,8 +28,8 @@ https://github.com/adamculpepper/pure-css-float-labels
 
 /* :disabled and :readonly styles */
 .has-float-label .form-control:read-only,
-.has-float-label .form-control:disabled,
-.has-float-label .form-control:disabled + label {opacity:0.5;}
+.has-float-label .form-control[disabled],
+.has-float-label .form-control[disabled] + label {opacity:0.5;}
 
 /* Textarea elements*/
 .has-float-label textarea.form-control:placeholder-shown:not(:focus) + label {top:1.5rem;}
@@ -37,8 +37,13 @@ https://github.com/adamculpepper/pure-css-float-labels
 /* Select elements*/
 .has-float-label select.form-control {padding-left:0.50rem;}
 .has-float-label select.form-control:placeholder-shown:not(:focus) + label {top:1.5rem;}
-.has-float-label select.form-control option[value=""]:read-only,
-.has-float-label select.form-control option[value=""]:disabled {display:none;}
+.has-float-label select.form-control option[selected]:read-only,
+.has-float-label select.form-control option[selected][disabled] {display:none;}
+.has-float-label select.form-control option[disabled] {opacity:0.5!important; color:red;}
+
+
+[disabled]:hover {cursor:not-allowed;}
+
 
 /* Hide placeholders since we're taking care of those with label elements */
 .has-float-label ::-webkit-input-placeholder {color:transparent!important;}
