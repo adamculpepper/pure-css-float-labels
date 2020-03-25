@@ -21,4 +21,4 @@ body {display:flex; flex-direction:column;}
 #content {flex:1 0 auto;}
 footer {flex-shrink:0;}
 
-textarea {width:100%; font-size:0.7rem;}
+code {font-size:0.8rem!important;}

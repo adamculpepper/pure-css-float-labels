@@ -8,7 +8,7 @@ https://github.com/adamculpepper/pure-css-float-labels
 .has-float-label label {
 	opacity:0.70;
 	position:absolute;
-	top:0.20rem;
+	top:1px;
 	width:100%;
 	font-size:0.75rem;
 	transition:all 0.30s;
@@ -27,22 +27,37 @@ https://github.com/adamculpepper/pure-css-float-labels
 	      -ms-user-select:none; /* Internet Explorer/Edge */
 	          user-select:none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
 }
-.has-float-label .form-control {padding-top:15px; padding-bottom:0;}
+
+.has-float-label .form-control {padding-top:12px; padding-bottom:0;}
+.has-float-label .form-control[readonly] + label,
 .has-float-label .form-control:placeholder-shown:not(:focus) + label {opacity:0.50; top:50%; transform:translateY(-50%); font-size:1rem; color:inherit;}
 
 /* :disabled and :readonly styles */
-.has-float-label .form-control:read-only,
+.has-float-label .form-control[readonly],
 .has-float-label .form-control:disabled,
 .has-float-label .form-control:disabled + label {opacity:0.5;}
 
-/* Textarea elements*/
-.has-float-label textarea.form-control:placeholder-shown:not(:focus) + label {top:1.5rem;}
+/* Textarea + select (multiple) elements */
+.has-float-label textarea.form-control,
+.has-float-label select.form-control[multiple] {padding-top:20px;}
+.has-float-label textarea.form-control[readonly] + label,
+.has-float-label select.form-control[multiple] + label,
+.has-float-label textarea.form-control:placeholder-shown:not(:focus) + label {top:1.15rem;}
+.has-float-label textarea.form-control + label,
+.has-float-label select.form-control[multiple] + label {backdrop-filter:blur(5px); width:calc(100% - 20px); padding-top:0.2rem; padding-bottom:0.2rem;}
+.has-float-label textarea.form-control + label:before,
+.has-float-label select.form-control[multiple] + label:before {content:''; display:block; width:100%; width:100%; height:100%; background-color:#fff; position:absolute; top:0; left:1px; z-index:-1;}
 
-/* Select elements*/
+/* [readonly] doesn't have a :placeholder-shown state so... here's a fix */
+.has-float-label .form-control[readonly] + label {top:0.75rem; color:blue; font-size:0.75rem;}
+
+.has-float-label select.form-control[multiple] + label {top:0; background-color:red;}
+.has-float-label select.form-control[multiple][readonly] + label {top:0.75rem; color:blue; font-size:0.75rem;}
+
+/* Select elements */
 .has-float-label select.form-control {padding-left:0.50rem;}
 .has-float-label select.form-control:placeholder-shown:not(:focus) + label {top:1.5rem;}
-.has-float-label select.form-control option[value=""]:read-only,
-.has-float-label select.form-control option[value=""]:disabled {display:none;}
+.has-float-label select.form-control option[selected]:disabled {display:none;}
 
 /* Hide placeholders since we're taking care of those with label elements */
 .has-float-label ::-webkit-input-placeholder {color:transparent!important;}

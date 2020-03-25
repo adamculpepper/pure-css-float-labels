@@ -54,7 +54,7 @@
 	</head>
 	<body>
 		<header>
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
 					<div class="col-12 py-3">
 						<div class="row">
@@ -74,14 +74,13 @@
 			</div>
 		</header>
 
-		<div id="content" class="container mt-4">
+		<div id="content" class="container-fluid mt-4">
 			<div class="row mb-4">
 				<div class="col-12">
 					<div class="row">
 						<div class="col-12">
 							<h2>Demos</h2>
 						</div>
-
 						<div class="col-4">
 							<div class="card">
 								<div class="card-header">Input Field</div>
@@ -113,22 +112,33 @@
 										<div class="has-float-label">
 											<select id="field-select" class="form-control">
 												<option selected disabled>- SELECT -</option>
-												<option value="option1">Option 1</option>
-												<option value="option2">Option 2</option>
-												<option value="option3" disabled>Option 3</option>
-												<option value="option4">Option 4</option>
-												<option value="option5">Option 5</option>
+												<option value="1" selected>Web Designer</option>
+												<option value="2">UX Designer</option>
+												<option value="3" selected>Web Developer</option>
+												<option value="4">UI Developer</option>
+												<option value="5" disabled>Backend Developer</option>
+												<option value="6">QA Tester</option>
+												<option value="7">Project Manager</optio>
 											</select>
-											<label for="field-select">Full Name</label>
+											<label for="field-select">Job Title</label>
 										</div>
 									</div>
 									<div class="form-group mb-0">
-										<textarea rows="4">
-										<div class="has-float-label">
-											<input type="text" id="name" class="form-control" placeholder=".">
-											<label for="name">Blank Input</label>
-										</div>
-										</textarea>
+<pre>
+<code class="language-html">
+&lt;div class=&quot;has-float-label&quot;&gt;
+	&lt;select id=&quot;field-select&quot; class=&quot;form-control&quot;&gt;
+		&lt;option selected disabled&gt;- SELECT -&lt;/option&gt;
+		&lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
+		&lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
+		&lt;option value=&quot;option3&quot; disabled&gt;Option 3&lt;/option&gt;
+		&lt;option value=&quot;option4&quot;&gt;Option 4&lt;/option&gt;
+		&lt;option value=&quot;option5&quot;&gt;Option 5&lt;/option&gt;
+	&lt;/select&gt;
+	&lt;label for=&quot;field-select&quot;&gt;Job Title&lt;/label&gt;
+&lt;/div&gt;
+</code>
+</pre>
 									</div>
 								</div>
 							</div>
@@ -139,21 +149,25 @@
 								<div class="card-body">
 									<div class="form-group">
 										<div class="has-float-label">
-											<textarea type="text" id="full-name" class="form-control" placeholder="."></textarea>
-											<label for="full-name">Full Name</label>
+											<textarea id="field-textarea" class="form-control" rows="3" placeholder="."></textarea>
+											<label for="field-textarea">Internal Notes</label>
 										</div>
 									</div>
 									<div class="form-group mb-0">
-										<textarea rows="4">
-										<div class="has-float-label">
-											<input type="text" id="name" class="form-control" placeholder=".">
-											<label for="name">Blank Input</label>
-										</div>
-										</textarea>
+<pre>
+<code class="language-html">
+&lt;div class=&quot;has-float-label&quot;&gt;
+	&lt;textarea id=&quot;field-textarea&quot; class=&quot;form-control&quot; rows=&quot;3&quot; placeholder=&quot;.&quot;&gt;&lt;/textarea&gt;
+	&lt;label for=&quot;field-textarea&quot;&gt;Internal Notes&lt;/label&gt;
+&lt;/div&gt;
+</code>
+</pre>
 									</div>
 								</div>
 							</div>
 						</div>
+
+
 					</div>
 				</div>
 			</div>
@@ -164,112 +178,414 @@
 				<div class="col-12">
 					<h2>Tests</h2>
 				</div>
-
-				<div class="col-6">
+				<div class="col-12">
+					<div class="row">
+						<div class="col-2 font-weight-bold">blank</div>
+						<div class="col-2 font-weight-bold">blank, disabled</div>
+						<div class="col-2 font-weight-bold">blank, readonly</div>
+						<div class="col-2 font-weight-bold">has value</div>
+						<div class="col-2 font-weight-bold">has value, disabled</div>
+						<div class="col-2 font-weight-bold">has value, readonly</div>
+					</div>
+				</div>
+				<div class="col-2">
 					<div class="form-group">
 						<div class="has-float-label">
-							<input type="email" id="type-email" class="form-control" placeholder=".">
-							<label for="type-email">type="email"</label>
+							<input type="text" id="type-text1" class="form-control" placeholder=".">
+							<label for="type-text1">Input field</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="type-text2" class="form-control" placeholder="." disabled>
+							<label for="type-text2">Input field</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="type-text3" class="form-control" placeholder="." readonly>
+							<label for="type-text3">Input field</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="type-text4" class="form-control" placeholder="." value="Value filled out">
+							<label for="type-text4">Input field with value</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="type-text5" class="form-control" placeholder="." value="Value filled out" disabled>
+							<label for="type-text5">Input field with value</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="type-text6" class="form-control" placeholder="." value="Value filled out" readonly>
+							<label for="type-text6">Input field with value</label>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-6">
+
+				<div class="col-2">
 					<div class="form-group">
 						<div class="has-float-label">
-							<input type="password" id="type-password" class="form-control" placeholder=".">
-							<label for="type-password">type="password"</label>
+							<textarea id="textarea-element1" class="form-control" placeholder="." rows="3"></textarea>
+							<label for="textarea-element1">Textarea</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<textarea id="textarea-element2" class="form-control" placeholder="." rows="3" disabled></textarea>
+							<label for="textarea-element2">Textarea</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<textarea id="textarea-element3" class="form-control" placeholder="." rows="3" readonly></textarea>
+							<label for="textarea-element3">Textarea</label>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-6">
+				<div class="col-2">
 					<div class="form-group">
 						<div class="has-float-label">
-							<input type="email" id="email" class="form-control">
-							<label for="email">No placeholder attribute</label>
+							<textarea id="textarea-element4" class="form-control" placeholder="." rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="textarea-element4">Textarea with value</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<textarea id="textarea-element5" class="form-control" placeholder="." rows="3" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="textarea-element5">Textarea with value</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<textarea id="textarea-element6" class="form-control" placeholder="." rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="textarea-element6">Textarea with value</label>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-6">
+				<div class="col-2">
 					<div class="form-group">
 						<div class="has-float-label">
-							<input type="email" id="email" class="form-control" value="example@something.com">
-							<label for="email">No placeholder attribute + has value</label>
+							<input type="text" id="no-placeholder1" class="form-control">
+							<label for="no-placeholder1">No placeholder attr</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="no-placeholder2" class="form-control" disabled>
+							<label for="no-placeholder2">No placeholder attr</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="no-placeholder3" class="form-control" readonly>
+							<label for="no-placeholder3">No placeholder attr</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="no-placeholder4" class="form-control" value="Value filled out">
+							<label for="no-placeholder4">No placeholder attr (with value)</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="no-placeholder5" class="form-control" value="Value filled out" disabled>
+							<label for="no-placeholder5">No placeholder attr (with value)</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="no-placeholder6" class="form-control" value="Value filled out" readonly>
+							<label for="no-placeholder6">No placeholder attr (with value)</label>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-6">
+				<div class="col-2">
 					<div class="form-group">
 						<div class="has-float-label">
-							<input type="text" id="name" class="form-control" placeholder="">
-							<label for="name">Blank placeholder attribute</label>
+							<input type="text" id="blank-placeholder1" class="form-control" placeholder="">
+							<label for="blank-placeholder1">Blank placeholder attr</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="blank-placeholder2" class="form-control" placeholder="" disabled>
+							<label for="blank-placeholder2">Blank placeholder attr</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="blank-placeholder3" class="form-control" placeholder="" readonly>
+							<label for="blank-placeholder3">Blank placeholder attr</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="blank-placeholder4" class="form-control" placeholder="" value="Value filled out">
+							<label for="blank-placeholder4">Blank placeholder attr (with value)</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="blank-placeholder5" class="form-control" placeholder="" value="Value filled out" disabled>
+							<label for="blank-placeholder5">Blank placeholder attr (with value)</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="blank-placeholder6" class="form-control" placeholder="" value="Value filled out" readonly>
+							<label for="blank-placeholder6">Blank placeholder attr (with value)</label>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-6">
+				<div class="col-2">
 					<div class="form-group">
 						<div class="has-float-label">
-							<input type="text" id="name" class="form-control" placeholder="" value="value here">
-							<label for="name">Blank placeholder attribute + has value</label>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-6">
-					<div class="form-group has-float-label has-required">
-						<select class="form-control" id="field-company-type">
-							<option value="" disabled selected>- SELECT -</option>
-							<option value="1">Customer</option>
-							<option value="2">Lead</option>
-							<option value="3">Sales</option>
-							<option value="4">Homeless</option>
-						</select>
-						<label for="field-company-type">Company Type</label>
-					</div>
-				</div>
-
-				<div class="col-6">
-					<div class="form-group">
-						<div class="has-float-label has-select2">
-							<select class="form-control select2" id="select2-element">
-								<!-- <option></option> -->
-								<option value="1">Test Person 1</option>
-								<option value="2">Test Person 2</option>
-								<option value="3">Test Person 3</option>
-								<option value="4">Test Person 4</option>
-								<option value="5">Test Person 5</option>
-								<option value="6">Test Person 6</option>
-								<option value="7">Test Person 7</option>
-								<option value="8">Test Person 8</option>
-								<option value="9">Test Person 9</option>
-								<option value="10">Test Person 10</option>
+							<select class="form-control" id="select-element1">
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
 							</select>
-							<label for="">fsasadsfs</label>
+							<label for="select-element1">Department</label>
 						</div>
 					</div>
 				</div>
-
-				<div class="col-6">
+				<div class="col-2">
 					<div class="form-group">
 						<div class="has-float-label">
-							<textarea id="textarea-element" class="form-control" placeholder="Textarea Element" rows="3" style="width:100%;"></textarea>
-							<label for="" id="textarea-element">Textarea Element, no value</label>
+							<select class="form-control" id="select-element2" disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element2">Department</label>
 						</div>
 					</div>
 				</div>
-
-				<div class="col-6">
+				<div class="col-2 text-muted">deprecated</div>
+				<div class="col-2">
 					<div class="form-group">
 						<div class="has-float-label">
-							<textarea id="textarea-element" class="form-control" placeholder="Textarea Element" rows="3" style="width:100%;">Textarea with value</textarea>
-							<label for="" id="textarea-element">Textarea Element with value</label>
+							<select class="form-control" id="select-element4">
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element4">Department</label>
 						</div>
 					</div>
 				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control" id="select-element5" disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element5">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2 text-muted">deprecated</div>
+
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control select2" id="select2-element1">
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select2-element1">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control select2" id="select2-element2" disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select2-element2">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2 text-muted">deprecated</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control select2" id="select2-element4">
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select2-element4">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control select2" id="select2-element5" disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select2-element5">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2 text-muted">deprecated</div>
+
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control" id="select-element-multiple1" size="4" multiple>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-multiple1">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control" id="select-element-multiple2" size="4" multiple disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-multiple2">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2 text-muted">deprecated</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control" id="select-element-multiple4" size="4" multiple>
+								<option value="1" selected>Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3" selected>Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-multiple4">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control" id="select-element-multiple5" size="4" multiple disabled>
+								<option value="1" selected>Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3" selected>Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-multiple5">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2 text-muted">deprecated</div>
 			</div>
 		</div>
 
