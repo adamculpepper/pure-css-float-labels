@@ -1,5 +1,5 @@
 
-# float-labels.css
+# Pure CSS Float Labels
 Float Labels for [Bootstrap4](https://getbootstrap.com) (with support for `<input>`, `<select>`, `<textarea>` and [Select2](https://select2.org))
 
 ## Features
