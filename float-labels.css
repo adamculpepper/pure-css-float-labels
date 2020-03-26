@@ -35,7 +35,7 @@ https://github.com/adamculpepper/pure-css-float-labels
 /* :disabled and :readonly styles */
 .has-float-label .form-control[readonly],
 .has-float-label .form-control:disabled,
-.has-float-label .form-control:disabled + label {opacity:0.5;}
+.has-float-label .form-control:disabled + label {opacity:0.5; cursor:not-allowed;}
 
 /* Textarea + select (multiple) elements */
 .has-float-label textarea.form-control,
@@ -76,9 +76,23 @@ https://github.com/adamculpepper/pure-css-float-labels
 .has-float-label textarea.form-control[placeholder = ''] + label:after,
 .has-float-label textarea.form-control:not([placeholder]) + label:after {margin-left:10px; color:red;}
 .has-float-label input.form-control[placeholder = ''] + label:after,
-.has-float-label input.form-control:not([placeholder]) + label:after {content:'input placeholder missing!';}
+.has-float-label input.form-control:not([placeholder]) + label:after,
 .has-float-label textarea.form-control[placeholder = ''] + label:after,
-.has-float-label textarea.form-control:not([placeholder]) + label:after {content:'textarea placeholder missing!';}
+.has-float-label textarea.form-control:not([placeholder]) + label:after {content:'placeholder missing!';}
+
+/* [required] attribute based required field indicators */
+.has-float-label .form-control[required] + label:after,
+.has-float-label .form-control[required] + .select2 + label:after {
+	content:'*';
+	font-size:0.8rem;
+	position:absolute;
+	top:50%;
+	transform:translateY(-50%);
+	height:100%;
+	margin-left:5px;
+	transition:all 300ms;
+}
+.has-float-label .form-control[required]:placeholder-shown:not(:focus) + label:after {font-size:1rem;}
 
 /* ------------------------------ */
 

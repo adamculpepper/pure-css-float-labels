@@ -58,7 +58,7 @@
 					<div class="col-12 py-3">
 						<div class="row">
 							<div class="col-lg-9">
-								<h1>Pure CSS Float Labels<span class="h5 ml-2">v1.7</span></h1>
+								<h1>Pure CSS Float Labels<span class="h5 ml-2">v1.8</span></h1>
 								<h2 class="h4">Pure CSS Float Labels for Bootstrap4 (with Select2 support)</h2>
 							</div>
 							<div class="col-lg-3 d-block d-lg-flex align-items-center mt-4 mt-lg-0">
@@ -171,8 +171,6 @@
 				</div>
 			</div>
 
-
-
 			<div class="row">
 				<div class="col-12">
 					<h2>Tests</h2>
@@ -236,6 +234,54 @@
 					</div>
 				</div>
 
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="type-text-required1" class="form-control" placeholder="." required>
+							<label for="type-text-required1">Input field (required)</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="type-text-required2" class="form-control" placeholder="." required disabled>
+							<label for="type-text-required2">Input field (required)</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="type-text-required3" class="form-control" placeholder="." required readonly>
+							<label for="type-text-required3">Input field (required)</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="type-text-required4" class="form-control" placeholder="." required value="Value filled out">
+							<label for="type-text-required4">Input field (required) with value</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="type-text-required5" class="form-control" placeholder="." required value="Value filled out" disabled>
+							<label for="type-text-required5">Input field (required) with value</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<input type="text" id="type-text-required6" class="form-control" placeholder="." required value="Value filled out" readonly>
+							<label for="type-text-required6">Input field (required) with value</label>
+						</div>
+					</div>
+				</div>
 
 				<div class="col-2">
 					<div class="form-group">
@@ -261,7 +307,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="col-2">
 					<div class="form-group">
 						<div class="has-float-label">
@@ -283,6 +328,55 @@
 						<div class="has-float-label">
 							<textarea id="textarea-element6" class="form-control" placeholder="." rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
 							<label for="textarea-element6">Textarea with value</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<textarea id="textarea-element-required1" class="form-control" placeholder="." required rows="3"></textarea>
+							<label for="textarea-element-required1">Textarea (required)</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<textarea id="textarea-element-required2" class="form-control" placeholder="." required rows="3" disabled></textarea>
+							<label for="textarea-element-required2">Textarea (required)</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<textarea id="textarea-element-required3" class="form-control" placeholder="." required rows="3" readonly></textarea>
+							<label for="textarea-element-required3">Textarea (required)</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<textarea id="textarea-element-required4" class="form-control" placeholder="." required rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="textarea-element-required4">Textarea (required) with value</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<textarea id="textarea-element-required5" class="form-control" placeholder="." required rows="3" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="textarea-element-required5">Textarea (required) with value</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<textarea id="textarea-element-required6" class="form-control" placeholder="." required rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="textarea-element-required6">Textarea (required) with value</label>
 						</div>
 					</div>
 				</div>
@@ -455,6 +549,73 @@
 				<div class="col-2">
 					<div class="form-group">
 						<div class="has-float-label">
+							<select class="form-control" id="select-element-required1" required>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-required1">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control" id="select-element-required2" required disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-required2">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2 text-muted">deprecated</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control" id="select-element-required4" required>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-required4">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control" id="select-element-required5" required disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-required5">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2 text-muted">deprecated</div>
+
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
 							<select class="form-control select2" id="select2-element1">
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
@@ -514,6 +675,73 @@
 								<option value="7">Project Manager</option>
 							</select>
 							<label for="select2-element5">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2 text-muted">deprecated</div>
+
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control select2" id="select2-element-required1" required>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select2-element-required1">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control select2" id="select2-element-required2" required disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select2-element-required2">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2 text-muted">deprecated</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control select2" id="select2-element-required4" required>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select2-element-required4">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control select2" id="select2-element-required5" required disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select2-element-required5">Department</label>
 						</div>
 					</div>
 				</div>
@@ -585,6 +813,75 @@
 					</div>
 				</div>
 				<div class="col-2 text-muted">deprecated</div>
+
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control" id="select-element-multiple-required1" size="4" required multiple>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-multiple-required1">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control" id="select-element-multiple-required2" size="4" required multiple disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-multiple-required2">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2 text-muted">deprecated</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control" id="select-element-multiple-required4" size="4" required multiple>
+								<option value="1" selected>Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3" selected>Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-multiple-required4">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-group">
+						<div class="has-float-label">
+							<select class="form-control" id="select-element-multiple-required5" size="4" required multiple disabled>
+								<option value="1" selected>Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3" selected>Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-multiple-required5">Department</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-2 text-muted">deprecated</div>
+
+
 			</div>
 		</div>
 
