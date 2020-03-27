@@ -4,14 +4,15 @@ Float Labels for [Bootstrap4](https://getbootstrap.com) (with support for `<inpu
 
 ## Features
 - Pure CSS only Float Labels
-- Support for `<input>`, `<select>`, `<textarea>`
+- Support for `<input>`, `<select>` and `<textarea>` elements
+- Support for `[disabled]` and `[readonly]` attributes
 - Support for [Select2](https://select2.org) (with some JS needed to be added)
-- error handling for missing needed tags and attributes
+- Error handling for missing needed tags and attributes
 
 ## TODO
 - ~~get `<textarea>` elements working~~
-- create demo site
-- get normal `<select>` elements working 100%
+- ~~create demo site~~
+- ~~get normal `<select>` elements working 100%~~
 - error handling for [Select2](https://select2.org) missing 'placeholder' attribute or 'label' tag
 - support for clearing the [Select2](https://select2.org) value using jQuery (doesn't trigger change event this way)
 
