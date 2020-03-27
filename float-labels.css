@@ -60,7 +60,7 @@ https://github.com/adamculpepper/pure-css-float-labels
 .has-float-label textarea.form-control + label,
 .has-float-label select.form-control[multiple] + label {backdrop-filter:blur(0);}
 .has-float-label textarea.form-control:placeholder-shown:not(:focus) + label:before,
-.has-float-label select.form-control:placeholder-shown:not(:focus)[multiple] + label:before {background-color:transparent;}
+.has-float-label select.form-control[multiple]:placeholder-shown:not(:focus) + label:before {background-color:transparent;}
 
 /* Select elements */
 .has-float-label select.form-control {padding-left:0.50rem;}
