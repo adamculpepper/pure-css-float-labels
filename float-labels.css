@@ -19,8 +19,8 @@ https://github.com/adamculpepper/pure-css-float-labels
 	--floatlabels-input-bootstrap5-lg-padding:1.00rem;
 }
 
-.has-float-label {position:relative;}
-.has-float-label > label {
+.float-label {position:relative;}
+.float-label > label {
 	opacity:0.75;
 	position:absolute;
 	top:0;
@@ -41,94 +41,92 @@ https://github.com/adamculpepper/pure-css-float-labels
 	          user-select:none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
 }
 
-.has-float-label > select,
-.has-float-label > input:focus,
-.has-float-label > textarea:focus,
-.has-float-label > input:not(:placeholder-shown),
-.has-float-label > textarea:not(:placeholder-shown) {padding-bottom:0;}
+.float-label > select,
+.float-label > input:focus,
+.float-label > textarea:focus,
+.float-label > input:not(:placeholder-shown),
+.float-label > textarea:not(:placeholder-shown) {padding-bottom:0;}
 
-.has-float-label > input:focus ~ label,
-.has-float-label > textarea:focus ~ label,
-.has-float-label > input:not(:placeholder-shown) ~ label,
-.has-float-label > textarea:not(:placeholder-shown) ~ label,
-.has-float-label > select ~ label {
+.float-label > input:focus ~ label,
+.float-label > textarea:focus ~ label,
+.float-label > input:not(:placeholder-shown) ~ label,
+.float-label > textarea:not(:placeholder-shown) ~ label,
+.float-label > select ~ label {
 	opacity:0.50;
 	font-size:75%;
 	margin-top:-0.50rem;
 }
 
-.has-float-label input,
-.has-float-label select:not([multiple]),
-.has-float-label label {height:var(--floatlabels-input-default-height); line-height:var(--floatlabels-input-default-height);}
+.float-label input,
+.float-label select:not([multiple]),
+.float-label label {height:var(--floatlabels-input-default-height); line-height:var(--floatlabels-input-default-height);}
 
-.has-float-label input,
-.has-float-label select,
-.has-float-label textarea,
-.has-float-label label {padding-left:var(--floatlabels-input-default-padding); padding-right:var(--floatlabels-input-default-padding);}
+.float-label input,
+.float-label select,
+.float-label textarea,
+.float-label label {padding-left:var(--floatlabels-input-default-padding); padding-right:var(--floatlabels-input-default-padding);}
 
 
 /* Non-Bootstrap 5 */
-.has-float-label input:not(.form-control),
-.has-float-label select:not(.form-control):not(.form-select),
-.has-float-label textarea:not(.form-control) {padding-top:0.75rem;}
+.float-label input:not(.form-control),
+.float-label select:not(.form-control):not(.form-select),
+.float-label textarea:not(.form-control) {padding-top:0.75rem;}
 
-.has-float-label :not(.form-control):not(.form-select) + label {padding-top:0;}
+.float-label :not(.form-control):not(.form-select) + label {padding-top:0;}
 
 
 /* Bootstrap 5 */
-.has-float-label input.form-control {padding-top:0.50rem;}
-.has-float-label select.form-control,
-.has-float-label select.form-select {padding-top:0.30rem;}
+.float-label input.form-control {padding-top:0.50rem;}
+.float-label select.form-control,
+.float-label select.form-select {padding-top:0.30rem;}
 
-.has-float-label input.form-control,
-.has-float-label select.form-control,
-.has-float-label select.form-select,
-.has-float-label .form-control + label,
-.has-float-label .form-select + label {
+.float-label input.form-control,
+.float-label select.form-control,
+.float-label select.form-select,
+.float-label .form-control + label,
+.float-label .form-select + label {
 	/*height:var(--floatlabels-input-bootstrap5-height);
 	line-height:var(--floatlabels-input-bootstrap5-height);*/
 	padding-left:var(--floatlabels-input-default-padding);
 	padding-right:var(--floatlabels-input-default-padding);
 }
 
-.has-float-label input.form-control-sm,
-.has-float-label select.form-control-sm,
-.has-float-label select.form-select-sm,
-.has-float-label .form-control-sm + label,
-.has-float-label .form-select-sm + label {
+.float-label input.form-control-sm,
+.float-label select.form-control-sm,
+.float-label select.form-select-sm,
+.float-label .form-control-sm + label,
+.float-label .form-select-sm + label {
 	height:var(--floatlabels-input-bootstrap5-sm-height);
 	line-height:var(--floatlabels-input-bootstrap5-sm-height);
 	padding-left:var(--floatlabels-input-bootstrap5-sm-padding);
 	padding-right:var(--floatlabels-input-bootstrap5-sm-padding);
 }
 
-.has-float-label input.form-control-lg,
-.has-float-label select.form-control-lg,
-.has-float-label select.form-select-lg,
-.has-float-label .form-control-lg + label,
-.has-float-label .form-select-lg + label {
+.float-label input.form-control-lg,
+.float-label select.form-control-lg,
+.float-label select.form-select-lg,
+.float-label .form-control-lg + label,
+.float-label .form-select-lg + label {
 	height:var(--floatlabels-input-bootstrap5-lg-height);
 	line-height:var(--floatlabels-input-bootstrap5-lg-height);
 	padding-left:var(--floatlabels-input-bootstrap5-lg-padding);
 	padding-right:var(--floatlabels-input-bootstrap5-lg-padding);
 }
 
-.has-float-label .form-control:focus + label,
-.has-float-label .form-control:not(:placeholder-shown) + label,
-.has-float-label .form-select:focus + label,
-.has-float-label .form-select:not(:placeholder-shown) + label {line-height:100%; margin-top:0.25rem;}
+.float-label .form-control:focus + label,
+.float-label .form-control:not(:placeholder-shown) + label,
+.float-label .form-select:focus + label,
+.float-label .form-select:not(:placeholder-shown) + label {line-height:100%; margin-top:0.25rem;}
 
 
 /* Bootstrap 5 fixes */
-.has-float-label.input-group label,
-.has-float-label .input-group label,
-.input-group .has-float-label label {z-index:3;}
+.float-label.input-group label,
+.float-label .input-group label,
+.input-group .float-label label {z-index:3;}
 
-.has-float-label.input-group .btn,
-.has-float-label .input-group .btn,
-.input-group .has-float-label .btn {padding-top:0; padding-bottom:0;}
-
-
+.float-label.input-group .btn,
+.float-label .input-group .btn,
+.input-group .float-label .btn {padding-top:0; padding-bottom:0;}
 
 
 
@@ -139,80 +137,82 @@ https://github.com/adamculpepper/pure-css-float-labels
 
 
 
-.has-float-label input,
-.has-float-label select,
-.has-float-label textarea {/*padding-top:5%; padding-bottom:0;*/} /* remove this padding on the input. maybe replace with transform? */
-.has-float-label .form-control[readonly] + label,
-/* .has-float-label .form-control:placeholder-shown:not(:focus) + label {opacity:0.50; font-size:inherit;} */
-/* .has-float-label .form-control + label,
-.has-float-label input.form-control + label {top:1px;} */
-/* .has-float-label input.form-control:placeholder-shown:not(:focus) + label {top:50%; transform:translateY(-50%);} */
-.has-float-label input.form-control:-webkit-autofill + label {} /* just the mere presence of this empty style fixes issue #6. strange. */
-.has-float-label input.form-control:-moz-autofill + label {} /* untested: firefox fix; */
+
+
+.float-label input,
+.float-label select,
+.float-label textarea {/*padding-top:5%; padding-bottom:0;*/} /* remove this padding on the input. maybe replace with transform? */
+.float-label .form-control[readonly] + label,
+/* .float-label .form-control:placeholder-shown:not(:focus) + label {opacity:0.50; font-size:inherit;} */
+/* .float-label .form-control + label,
+.float-label input.form-control + label {top:1px;} */
+/* .float-label input.form-control:placeholder-shown:not(:focus) + label {top:50%; transform:translateY(-50%);} */
+.float-label input.form-control:-webkit-autofill + label {} /* just the mere presence of this empty style fixes issue #6. strange. */
+.float-label input.form-control:-moz-autofill + label {} /* untested: firefox fix; */
 
 /* [required] attribute based required field indicators */
-.has-float-label .form-control[required] + label:after,
-.has-float-label > select.form-select[required] + .select2-container + label:after,
-.has-float-label > select.form-control[required] + .select2-container + label:after {content:'*'; font-size:0.75rem; margin-left:5px; transition:all 300ms;}
+.float-label .form-control[required] + label:after,
+.float-label > select.form-select[required] + .select2-container + label:after,
+.float-label > select.form-control[required] + .select2-container + label:after {content:'*'; font-size:0.75rem; margin-left:5px; transition:all 300ms;}
 
 /* [disabled] and [readonly] styles */
-.has-float-label .form-control[readonly],
-.has-float-label .form-control[disabled],
-.has-float-label .form-control[disabled] + label {opacity:0.5; cursor:not-allowed;}
+.float-label .form-control[readonly],
+.float-label .form-control[disabled],
+.float-label .form-control[disabled] + label {opacity:0.5; cursor:not-allowed;}
 
 /* [readonly]'s :placeholder-shown state sucks so... here's a fix */
-.has-float-label .form-control[readonly] + label {color:inherit; font-size:0.75rem;}
-.has-float-label .form-control[readonly]:placeholder-shown:not(:focus) + label:after {color:inherit;}
+.float-label .form-control[readonly] + label {color:inherit; font-size:0.75rem;}
+.float-label .form-control[readonly]:placeholder-shown:not(:focus) + label:after {color:inherit;}
 
 /* Textarea + select (multiple) elements */
-.has-float-label textarea.form-control,
-.has-float-label select.form-select[multiple],
-.has-float-label select.form-control[multiple] {padding-top:20px;}
+.float-label textarea.form-control,
+.float-label select.form-select[multiple],
+.float-label select.form-control[multiple] {padding-top:20px;}
 
-.has-float-label textarea.form-control + label,
-.has-float-label select.form-control[multiple] + label {backdrop-filter:blur(5px); width:calc(100% - 20px); padding-top:0.2rem; padding-bottom:0.2rem;}
-.has-float-label textarea.form-control + label:before,
-.has-float-label select.form-control[multiple] + label:before {content:''; display:block; width:100%; width:100%; height:100%; background-color:#fff; position:absolute; top:0; left:1px; z-index:-1;}
-.has-float-label textarea.form-control + label,
-.has-float-label select.form-control[multiple] + label {backdrop-filter:blur(0);}
-.has-float-label textarea.form-control:placeholder-shown:not(:focus) + label:before,
-.has-float-label select.form-control[multiple]:placeholder-shown:not(:focus) + label:before {background-color:transparent;}
+.float-label textarea.form-control + label,
+.float-label select.form-control[multiple] + label {backdrop-filter:blur(5px); width:calc(100% - 20px); padding-top:0.2rem; padding-bottom:0.2rem;}
+.float-label textarea.form-control + label:before,
+.float-label select.form-control[multiple] + label:before {content:''; display:block; width:100%; width:100%; height:100%; background-color:#fff; position:absolute; top:0; left:1px; z-index:-1;}
+.float-label textarea.form-control + label,
+.float-label select.form-control[multiple] + label {backdrop-filter:blur(0);}
+.float-label textarea.form-control:placeholder-shown:not(:focus) + label:before,
+.float-label select.form-control[multiple]:placeholder-shown:not(:focus) + label:before {background-color:transparent;}
 
 /* Select elements */
-.has-float-label select.form-select,
-.has-float-label select.form-control {padding-left:0.50rem;}
-.has-float-label select.form-select option[selected][disabled],
-.has-float-label select.form-control option[selected][disabled] {display:none;}
+.float-label select.form-select,
+.float-label select.form-control {padding-left:0.50rem;}
+.float-label select.form-select option[selected][disabled],
+.float-label select.form-control option[selected][disabled] {display:none;}
 
 /* Hide placeholders since we're taking care of those with label elements */
-.has-float-label ::-webkit-input-placeholder {color:transparent!important;}
-.has-float-label :-moz-placeholder {color:transparent!important;} /* Firefox 18- */
-.has-float-label ::-moz-placeholder {color:transparent!important;} /* Firefox 19+ */
-.has-float-label :-ms-input-placeholder {color:transparent!important;}
-.has-float-label ::placeholder {color:transparent!important;}
+.float-label ::-webkit-input-placeholder {color:transparent!important;}
+.float-label :-moz-placeholder {color:transparent!important;} /* Firefox 18- */
+.float-label ::-moz-placeholder {color:transparent!important;} /* Firefox 19+ */
+.float-label :-ms-input-placeholder {color:transparent!important;}
+.float-label ::placeholder {color:transparent!important;}
 
 /* Missing placeholder error messages */
-.has-float-label input.form-control[placeholder = ''],
-.has-float-label input.form-control:not([placeholder]),
-.has-float-label textarea.form-control[placeholder = ''],
-.has-float-label textarea.form-control:not([placeholder]) {border:1px solid red;}
-.has-float-label input.form-control[placeholder = ''] + label:after,
-.has-float-label input.form-control:not([placeholder]) + label:after,
-.has-float-label textarea.form-control[placeholder = ''] + label:after,
-.has-float-label textarea.form-control:not([placeholder]) + label:after {margin-left:10px; color:red;}
-.has-float-label input.form-control[placeholder = ''] + label:after,
-.has-float-label input.form-control:not([placeholder]) + label:after,
-.has-float-label textarea.form-control[placeholder = ''] + label:after,
-.has-float-label textarea.form-control:not([placeholder]) + label:after {content:'placeholder missing!';}
+.float-label input.form-control[placeholder = ''],
+.float-label input.form-control:not([placeholder]),
+.float-label textarea.form-control[placeholder = ''],
+.float-label textarea.form-control:not([placeholder]) {border:1px solid red;}
+.float-label input.form-control[placeholder = ''] + label:after,
+.float-label input.form-control:not([placeholder]) + label:after,
+.float-label textarea.form-control[placeholder = ''] + label:after,
+.float-label textarea.form-control:not([placeholder]) + label:after {margin-left:10px; color:red;}
+.float-label input.form-control[placeholder = ''] + label:after,
+.float-label input.form-control:not([placeholder]) + label:after,
+.float-label textarea.form-control[placeholder = ''] + label:after,
+.float-label textarea.form-control:not([placeholder]) + label:after {content:'placeholder missing!';}
 
 /* ------------------------------ */
 
 /* Select2 Support */
 
 /* Normalize Select2 for Bootstrap 4 */
-.has-float-label > select + .select2-container {position:relative;}
-.has-float-label > select + .select2-container .select2-selection {height:auto; border:0;}
-.has-float-label > select + .select2-container .select2-selection .select2-selection__rendered {
+.float-label > select + .select2-container {position:relative;}
+.float-label > select + .select2-container .select2-selection {height:auto; border:0;}
+.float-label > select + .select2-container .select2-selection .select2-selection__rendered {
 	height: calc(1.5em + .75rem + 2px);
 	line-height:calc(1.5em + .75rem + 2px);
 	padding:.375rem .75rem;
@@ -220,13 +220,13 @@ https://github.com/adamculpepper/pure-css-float-labels
 	border-radius:4px;
 }
 
-.has-float-label > select[disabled] + .select2-container,
-.has-float-label > select[disabled] + .select2-container + label {opacity:0.5;}
-.has-float-label > select[disabled] + .select2-container .select2-selection {cursor:not-allowed;}
+.float-label > select[disabled] + .select2-container,
+.float-label > select[disabled] + .select2-container + label {opacity:0.5;}
+.float-label > select[disabled] + .select2-container .select2-selection {cursor:not-allowed;}
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {height:100%; top:0;}
 
-/*.has-float-label > select + label.select2-float-label {
+/*.float-label > select + label.select2-float-label {
 	opacity:1;
 	position:absolute;
 	left:0.85rem;
@@ -239,14 +239,14 @@ https://github.com/adamculpepper/pure-css-float-labels
 	pointer-events:none;
 }*/
 
-/*.has-float-label > select + .select2-selection__placeholder {
+/*.float-label > select + .select2-selection__placeholder {
 	position:absolute;
 	top:50%;
 	transform:translateY(-50%);
 }*/
 
-/*.has-float-label > select + .select2-has-value label.select2-float-label,
-.has-float-label > select + .select2-container--open label.select2-float-label {
+/*.float-label > select + .select2-has-value label.select2-float-label,
+.float-label > select + .select2-container--open label.select2-float-label {
 	top:12px;
 	font-size:0.75rem;
 	color:red;
@@ -254,8 +254,8 @@ https://github.com/adamculpepper/pure-css-float-labels
 }*/
 
 /* Hide Select2's placeholder since we're taking care of the placeholder from here on */
-/*.has-float-label > select + .select2-has-opened .select2-selection__placeholder,
-.has-float-label > select + .select2-container--open .select2-selection__placeholder {opacity:0;}*/
+/*.float-label > select + .select2-has-opened .select2-selection__placeholder,
+.float-label > select + .select2-container--open .select2-selection__placeholder {opacity:0;}*/
 
 /* fix Mac visual bug */
 /* class applies to select element itself, not a wrapper element */
