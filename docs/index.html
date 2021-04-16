@@ -4,25 +4,25 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<title>Pure CSS Float Labels - Pure CSS Float Labels for Bootstrap4 (with Select2 support)</title>
+		<title>Pure CSS Float Labels with Bootstrap5 and Select2 support</title>
 		<meta name="author" content="Pure CSS Float Labels">
-		<meta name="description" content="Pure CSS Float Labels for Bootstrap4 (with Select2 support)">
+		<meta name="description" content="Pure CSS Float Labels with Bootstrap5 and Select2 support">
 		<!-- <link href="/favicon.ico" rel="shortcut icon"> -->
 		<!-- <link href="/favicon.png" rel="apple-touch-icon-precomposed"> -->
 
 		<!-- styles -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adamculpepper/pure-css-float-labels@latest/docs/assets/css/custom.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adamculpepper/pure-css-float-labels@latest/float-labels.css">
+		<link rel="stylesheet" href="assets/css/custom.css">
+		<link rel="stylesheet" href="../float-labels.css">
 
 		<!-- open graph meta -->
 		<meta property="og:title" content="Pure CSS Float Labels">
 		<meta property="og:site_name" content="Pure CSS Float Labels">
-		<meta property="og:description" content="Pure CSS Float Labels for Bootstrap4 (with Select2 support)">
-		<meta property="og:url" content="https://github.com/adamculpepper/pure-css-float-labels">
+		<meta property="og:description" content="Pure CSS Float Labels with Bootstrap5 and Select2 support">
+		<meta property="og:url" content="https://floatlabels.com">
 		<!-- <meta property="og:image" content="http://adamculpepper.net/repos/preview-toggle-switchy.png"> -->
 		<!-- <meta name="twitter:image" content="http://adamculpepper.net/repos/preview-toggle-switchy.png"> -->
 	</head>
@@ -33,13 +33,13 @@
 					<div class="col-12 py-3">
 						<div class="row">
 							<div class="col-lg-9">
-								<h1>Pure CSS Float Labels<span class="h5 ml-2">v1.10</span></h1>
-								<h2 class="h4">Pure CSS Float Labels for Bootstrap4 (with Select2 support)</h2>
+								<h1>Float Labels<span class="h5 ms-2">v2.0</span></h1>
+								<h2 class="h4">Pure CSS Float Labels with Bootstrap5 and Select2 support</h2>
 							</div>
 							<div class="col-lg-3 d-block d-lg-flex align-items-center mt-4 mt-lg-0">
-								<div class="d-inline-block text-center ml-auto">
-									<a class="btn btn-primary ml-auto d-block" href="https://github.com/adamculpepper/pure-css-float-labels">Edit on Github</a>
-									Docs in README
+								<div class="d-inline-block text-center ms-auto">
+									<a class="btn btn-primary ms-auto d-block" href="https://github.com/adamculpepper/pure-css-float-labels">Edit on Github</a>
+									<!-- Docs in README -->
 								</div>
 							</div>
 						</div>
@@ -48,416 +48,543 @@
 			</div>
 		</header>
 
-		<div id="content" class="container-fluid mt-4">
-			<div class="row mb-4">
-				<div class="col-12">
-					<div class="row">
-						<div class="col-12">
-							<h2>Demos</h2>
-						</div>
-						<div class="col-md-4">
-							<div class="card mb-4 md-md-0">
-								<div class="card-header">Input Field</div>
-								<div class="card-body">
-									<div class="form-group">
-										<div class="has-float-label">
-											<input type="text" id="input-field" class="form-control" placeholder="." autocomplete="off">
-											<label for="input-field">Full Name</label>
-										</div>
-									</div>
-									<div class="form-group mb-0">
-<pre>
-<code class="language-html">
-&lt;div class="has-float-label"&gt;
-	&lt;input type="text" id="full-name" class="form-control" placeholder="."&gt;
-	&lt;label for="full-name"&gt;Blank Input&lt;/label&gt;
-&lt;/div&gt;
-</code>
-</pre>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="card mb-4 md-md-0">
-								<div class="card-header">Select</div>
-								<div class="card-body">
-									<div class="form-group">
-										<div class="has-float-label">
-											<select id="field-select" class="form-control">
-												<option selected disabled>- SELECT -</option>
-												<option value="1" selected>Web Designer</option>
-												<option value="2">UX Designer</option>
-												<option value="3" selected>Web Developer</option>
-												<option value="4">UI Developer</option>
-												<option value="5" disabled>Backend Developer</option>
-												<option value="6">QA Tester</option>
-												<option value="7">Project Manager</optio>
-											</select>
-											<label for="field-select">Job Title</label>
-										</div>
-									</div>
-									<div class="form-group mb-0">
-<pre>
-<code class="language-html">
-&lt;div class=&quot;has-float-label&quot;&gt;
-	&lt;select id=&quot;field-select&quot; class=&quot;form-control&quot;&gt;
-		&lt;option selected disabled&gt;- SELECT -&lt;/option&gt;
-		&lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
-		&lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
-		&lt;option value=&quot;option3&quot; disabled&gt;Option 3&lt;/option&gt;
-		&lt;option value=&quot;option4&quot;&gt;Option 4&lt;/option&gt;
-		&lt;option value=&quot;option5&quot;&gt;Option 5&lt;/option&gt;
-	&lt;/select&gt;
-	&lt;label for=&quot;field-select&quot;&gt;Job Title&lt;/label&gt;
-&lt;/div&gt;
-</code>
-</pre>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="card">
-								<div class="card-header">Textarea</div>
-								<div class="card-body">
-									<div class="form-group">
-										<div class="has-float-label">
-											<textarea id="field-textarea" class="form-control" rows="3" placeholder="."></textarea>
-											<label for="field-textarea">Internal Notes</label>
-										</div>
-									</div>
-									<div class="form-group mb-0">
-<pre>
-<code class="language-html">
-&lt;div class=&quot;has-float-label&quot;&gt;
-	&lt;textarea id=&quot;field-textarea&quot; class=&quot;form-control&quot; rows=&quot;3&quot; placeholder=&quot;.&quot;&gt;&lt;/textarea&gt;
-	&lt;label for=&quot;field-textarea&quot;&gt;Internal Notes&lt;/label&gt;
-&lt;/div&gt;
-</code>
-</pre>
-									</div>
-								</div>
-							</div>
-						</div>
+		<!--
+		<div class="p-5" style="width:900px;">
+			<div class="row mb-3">
+				<div class="col"></div>
+				<div class="col">
+					<div class="has-float-label">
+						<input type="text" id="input-field" class="" placeholder="Full Name" autocomplete="off">
+						<label for="input-field">Full Name</label>
+					</div>
+				</div>
+				<div class="col"></div>
+			</div>
+			<div class="row mb-5">
+				<div class="col"></div>
+				<div class="col">
+					<div class="has-float-label">
+						<input type="text" id="input-field" class="" placeholder="Full Name" value="John Smith" autocomplete="off">
+						<label for="input-field">Full Name</label>
+					</div>
+				</div>
+				<div class="col"></div>
+			</div>
 
-
+			<div class="row mb-3">
+				<div class="col">
+					<div class="has-float-label">
+						<input type="text" id="input-field" class="form-control form-control-sm" placeholder="." autocomplete="off">
+						<label for="input-field">Full Name</label>
+					</div>
+					
+				</div>
+				<div class="col">
+					<div class="has-float-label">
+						<input type="text" id="input-field" class="form-control" placeholder="." autocomplete="off">
+						<label for="input-field">Full Name</label>
+					</div>
+				</div>
+				<div class="col">
+					<div class="has-float-label">
+						<input type="text" id="input-field" class="form-control form-control-lg" placeholder="." autocomplete="off">
+						<label for="input-field">Full Name</label>
+					</div>
+				</div>
+			</div>
+			<div class="row mb-5">
+				<div class="col">
+					<div class="has-float-label">
+						<input type="text" id="input-field" class="form-control form-control-sm" placeholder="." value="John Smith" autocomplete="off">
+						<label for="input-field">Full Name</label>
+					</div>
+				</div>
+				<div class="col">
+					<div class="has-float-label">
+						<input type="text" id="input-field" class="form-control" placeholder="." value="John Smith" autocomplete="off">
+						<label for="input-field">Full Name</label>
+					</div>
+				</div>
+				<div class="col">
+					<div class="has-float-label">
+						<input type="text" id="input-field" class="form-control form-control-lg" placeholder="." value="John Smith" autocomplete="off">
+						<label for="input-field">Full Name</label>
+					</div>
+				</div>
+			</div>
+	
+			<div class="row mb-3">
+				<div class="col">
+					<div class="has-float-label input-group">
+						<input type="text" id="input-field" class="form-control form-control-sm" placeholder="." autocomplete="off">
+						<label for="input-field">Full Name</label>
+						<button class="btn btn-primary">Button</button>
+					</div>
+				</div>
+				<div class="col">
+					<div class="has-float-label input-group">
+						<input type="text" id="input-field" class="form-control" placeholder="." autocomplete="off">
+						<label for="input-field">Full Name</label>
+						<button class="btn btn-primary">Button</button>
+					</div>
+				</div>
+				<div class="col">
+					<div class="has-float-label input-group">
+						<input type="text" id="input-field" class="form-control form-control-lg" placeholder="." autocomplete="off">
+						<label for="input-field">Full Name</label>
+						<button class="btn btn-primary">Button</button>
+					</div>
+				</div>
+			</div>
+			<div class="row mb-5">
+				<div class="col">
+					<div class="has-float-label input-group">
+						<input type="text" id="input-field" class="form-control form-control-sm" placeholder="." value="John Smith" autocomplete="off">
+						<label for="input-field">Full Name</label>
+						<button class="btn btn-primary">Button</button>
+					</div>
+				</div>
+				<div class="col">
+					<div class="has-float-label input-group">
+						<input type="text" id="input-field" class="form-control" placeholder="." value="John Smith" autocomplete="off">
+						<label for="input-field">Full Name</label>
+						<button class="btn btn-primary">Button</button>
+					</div>
+				</div>
+				<div class="col">
+					<div class="has-float-label input-group">
+						<input type="text" id="input-field" class="form-control form-control-lg" placeholder="." value="John Smith" autocomplete="off">
+						<label for="input-field">Full Name</label>
+						<button class="btn btn-primary">Button</button>
 					</div>
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="col-12">
-					<h2>Tests</h2>
-				</div>
-				<div class="col-12">
-					<div class="row">
-						<div class="col-4 col-md-2 font-weight-bold">blank</div>
-						<div class="col-4 col-md-2 font-weight-bold">blank, disabled</div>
-						<div class="col-4 col-md-2 font-weight-bold">blank, readonly</div>
-						<div class="col-4 col-md-2 font-weight-bold">has value</div>
-						<div class="col-4 col-md-2 font-weight-bold">has value, disabled</div>
-						<div class="col-4 col-md-2 font-weight-bold">has value, readonly</div>
+			<div class="row mb-3">
+				<div class="col"></div>
+				<div class="col">
+					<div class="has-float-label">
+						<select id="">
+							<option value="1">Web Designer</option>
+							<option value="2">UX Designer</option>
+							<option value="3">Web Developer</option>
+							<option value="4" selected="">UI Developer</option>
+							<option value="5">Backend Developer</option>
+							<option value="6">QA Tester</option>
+							<option value="7">Project Manager</option>
+						</select>
+						<label for="">Department</label>
 					</div>
 				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+				<div class="col"></div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="has-float-label">
+						<select class="form-select form-select-sm" id="">
+							<option value="1">Web Designer</option>
+							<option value="2">UX Designer</option>
+							<option value="3">Web Developer</option>
+							<option value="4" selected="">UI Developer</option>
+							<option value="5">Backend Developer</option>
+							<option value="6">QA Tester</option>
+							<option value="7">Project Manager</option>
+						</select>
+						<label for="">Department</label>
+					</div>
+				</div>
+				<div class="col">
+					<div class="has-float-label">
+						<select class="form-select" id="">
+							<option value="1">Web Designer</option>
+							<option value="2">UX Designer</option>
+							<option value="3">Web Developer</option>
+							<option value="4" selected="">UI Developer</option>
+							<option value="5">Backend Developer</option>
+							<option value="6">QA Tester</option>
+							<option value="7">Project Manager</option>
+						</select>
+						<label for="">Department</label>
+					</div>
+				</div>
+				<div class="col">
+					<div class="has-float-label">
+						<select class="form-select form-select-lg" id="">
+							<option value="1">Web Designer</option>
+							<option value="2">UX Designer</option>
+							<option value="3">Web Developer</option>
+							<option value="4" selected="">UI Developer</option>
+							<option value="5">Backend Developer</option>
+							<option value="6">QA Tester</option>
+							<option value="7">Project Manager</option>
+						</select>
+						<label for="">Department</label>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		-->
+
+
+		<div id="content" class="mt-4">
+			<div class="container-fluid">
+				<div class="row mb-4">
+					<div class="col-12">
+						<div class="row">
+							<div class="col-12">
+								<h2>Demos</h2>
+							</div>
+							<div class="col-md-4">
+								<div class="card mb-4 md-md-0">
+									<div class="card-header">Input Field</div>
+									<div class="card-body">
+										<div class="mb-3">
+											<div class="has-float-label">
+												<input type="text" id="input-field" class="form-control" placeholder="." autocomplete="off">
+												<label for="input-field">Full Name</label>
+											</div>
+										</div>
+										<div>
+	<pre>
+	<code class="language-html">
+	&lt;div class="has-float-label"&gt;
+		&lt;input type="text" id="full-name" class="form-control" placeholder="."&gt;
+		&lt;label for="full-name"&gt;Blank Input&lt;/label&gt;
+	&lt;/div&gt;
+	</code>
+	</pre>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="card mb-4 md-md-0">
+									<div class="card-header">Select</div>
+									<div class="card-body">
+										<div class="mb-3">
+											<div class="has-float-label">
+												<select id="field-select" class="form-control">
+													<option selected disabled>- SELECT -</option>
+													<option value="1" selected>Web Designer</option>
+													<option value="2">UX Designer</option>
+													<option value="3" selected>Web Developer</option>
+													<option value="4">UI Developer</option>
+													<option value="5" disabled>Backend Developer</option>
+													<option value="6">QA Tester</option>
+													<option value="7">Project Manager</optio>
+												</select>
+												<label for="field-select">Job Title</label>
+											</div>
+										</div>
+										<div>
+	<pre>
+	<code class="language-html">
+	&lt;div class=&quot;has-float-label&quot;&gt;
+		&lt;select id=&quot;field-select&quot; class=&quot;form-control&quot;&gt;
+			&lt;option selected disabled&gt;- SELECT -&lt;/option&gt;
+			&lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
+			&lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
+			&lt;option value=&quot;option3&quot; disabled&gt;Option 3&lt;/option&gt;
+			&lt;option value=&quot;option4&quot;&gt;Option 4&lt;/option&gt;
+			&lt;option value=&quot;option5&quot;&gt;Option 5&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;label for=&quot;field-select&quot;&gt;Job Title&lt;/label&gt;
+	&lt;/div&gt;
+	</code>
+	</pre>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="card">
+									<div class="card-header">Textarea</div>
+									<div class="card-body">
+										<div class="mb-3">
+											<div class="has-float-label">
+												<textarea id="field-textarea" class="form-control" rows="3" placeholder="."></textarea>
+												<label for="field-textarea">Internal Notes</label>
+											</div>
+										</div>
+										<div>
+	<pre>
+	<code class="language-html">
+	&lt;div class=&quot;has-float-label&quot;&gt;
+		&lt;textarea id=&quot;field-textarea&quot; class=&quot;form-control&quot; rows=&quot;3&quot; placeholder=&quot;.&quot;&gt;&lt;/textarea&gt;
+		&lt;label for=&quot;field-textarea&quot;&gt;Internal Notes&lt;/label&gt;
+	&lt;/div&gt;
+	</code>
+	</pre>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<h2>Tests <small class="fst-italic opacity-50">(no framework)</small></h2>
+
+				<div class="row bg-dark text-white py-3">
+					<div class="col fw-bold"></div>
+					<div class="col fw-bold">blank</div>
+					<div class="col fw-bold">blank, disabled</div>
+					<div class="col fw-bold">blank, readonly</div>
+					<div class="col fw-bold">has value</div>
+					<div class="col fw-bold">has value, disabled</div>
+					<div class="col fw-bold">has value, readonly</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input</div>
+					<div class="col">
 						<div class="has-float-label">
 							<input type="text" id="type-text1" class="form-control" placeholder=".">
-							<label for="type-text1">Input field</label>
+							<label for="type-text1">Full Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
 							<input type="text" id="type-text2" class="form-control" placeholder="." disabled>
-							<label for="type-text2">Input field</label>
+							<label for="type-text2">Full Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
 							<input type="text" id="type-text3" class="form-control" placeholder="." readonly>
-							<label for="type-text3">Input field</label>
+							<label for="type-text3">Full Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<input type="text" id="type-text4" class="form-control" placeholder="." value="Value filled out">
-							<label for="type-text4">Input field with value</label>
+							<input type="text" id="type-text4" class="form-control" placeholder="." value="John Smith">
+							<label for="type-text4">Full Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<input type="text" id="type-text5" class="form-control" placeholder="." value="Value filled out" disabled>
-							<label for="type-text5">Input field with value</label>
+							<input type="text" id="type-text5" class="form-control" placeholder="." value="John Smith" disabled>
+							<label for="type-text5">Full Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<input type="text" id="type-text6" class="form-control" placeholder="." value="Value filled out" readonly>
-							<label for="type-text6">Input field with value</label>
+							<input type="text" id="type-text6" class="form-control" placeholder="." value="John Smith" readonly>
+							<label for="type-text6">Full Name</label>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input [required]</div>
+					<div class="col">
 						<div class="has-float-label">
 							<input type="text" id="type-text-required1" class="form-control" placeholder="." required>
-							<label for="type-text-required1">Input field (required)</label>
+							<label for="type-text-required1">Full Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
 							<input type="text" id="type-text-required2" class="form-control" placeholder="." required disabled>
-							<label for="type-text-required2">Input field (required)</label>
+							<label for="type-text-required2">Full Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
 							<input type="text" id="type-text-required3" class="form-control" placeholder="." required readonly>
-							<label for="type-text-required3">Input field (required)</label>
+							<label for="type-text-required3">Full Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<input type="text" id="type-text-required4" class="form-control" placeholder="." required value="Value filled out">
-							<label for="type-text-required4">Input field (required) with value</label>
+							<input type="text" id="type-text-required4" class="form-control" placeholder="." required value="John Smith">
+							<label for="type-text-required4">Full Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<input type="text" id="type-text-required5" class="form-control" placeholder="." required value="Value filled out" disabled>
-							<label for="type-text-required5">Input field (required) with value</label>
+							<input type="text" id="type-text-required5" class="form-control" placeholder="." required value="John Smith" disabled>
+							<label for="type-text-required5">Full Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<input type="text" id="type-text-required6" class="form-control" placeholder="." required value="Value filled out" readonly>
-							<label for="type-text-required6">Input field (required) with value</label>
+							<input type="text" id="type-text-required6" class="form-control" placeholder="." required value="John Smith" readonly>
+							<label for="type-text-required6">Full Name</label>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<textarea id="textarea-element1" class="form-control" placeholder="." rows="3"></textarea>
-							<label for="textarea-element1">Textarea</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<textarea id="textarea-element2" class="form-control" placeholder="." rows="3" disabled></textarea>
-							<label for="textarea-element2">Textarea</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<textarea id="textarea-element3" class="form-control" placeholder="." rows="3" readonly></textarea>
-							<label for="textarea-element3">Textarea</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<textarea id="textarea-element4" class="form-control" placeholder="." rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
-							<label for="textarea-element4">Textarea with value</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<textarea id="textarea-element5" class="form-control" placeholder="." rows="3" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
-							<label for="textarea-element5">Textarea with value</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<textarea id="textarea-element6" class="form-control" placeholder="." rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
-							<label for="textarea-element6">Textarea with value</label>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<textarea id="textarea-element-required1" class="form-control" placeholder="." required rows="3"></textarea>
-							<label for="textarea-element-required1">Textarea (required)</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<textarea id="textarea-element-required2" class="form-control" placeholder="." required rows="3" disabled></textarea>
-							<label for="textarea-element-required2">Textarea (required)</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<textarea id="textarea-element-required3" class="form-control" placeholder="." required rows="3" readonly></textarea>
-							<label for="textarea-element-required3">Textarea (required)</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<textarea id="textarea-element-required4" class="form-control" placeholder="." required rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
-							<label for="textarea-element-required4">Textarea (required) with value</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<textarea id="textarea-element-required5" class="form-control" placeholder="." required rows="3" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
-							<label for="textarea-element-required5">Textarea (required) with value</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<textarea id="textarea-element-required6" class="form-control" placeholder="." required rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
-							<label for="textarea-element-required6">Textarea (required) with value</label>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input (placeholder blank)</div>
+					<div class="col">
 						<div class="has-float-label">
 							<input type="text" id="no-placeholder1" class="form-control">
-							<label for="no-placeholder1">No placeholder attr</label>
+							<label for="no-placeholder1">Last Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
 							<input type="text" id="no-placeholder2" class="form-control" disabled>
-							<label for="no-placeholder2">No placeholder attr</label>
+							<label for="no-placeholder2">Last Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
 							<input type="text" id="no-placeholder3" class="form-control" readonly>
-							<label for="no-placeholder3">No placeholder attr</label>
+							<label for="no-placeholder3">Last Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<input type="text" id="no-placeholder4" class="form-control" value="Value filled out">
-							<label for="no-placeholder4">No placeholder attr (with value)</label>
+							<input type="text" id="no-placeholder4" class="form-control" value="Smith">
+							<label for="no-placeholder4">Last Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<input type="text" id="no-placeholder5" class="form-control" value="Value filled out" disabled>
-							<label for="no-placeholder5">No placeholder attr (with value)</label>
+							<input type="text" id="no-placeholder5" class="form-control" value="Smith" disabled>
+							<label for="no-placeholder5">Last Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<input type="text" id="no-placeholder6" class="form-control" value="Value filled out" readonly>
-							<label for="no-placeholder6">No placeholder attr (with value)</label>
+							<input type="text" id="no-placeholder6" class="form-control" value="Smith" readonly>
+							<label for="no-placeholder6">Last Name</label>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input (no placeholder)</div>
+					<div class="col">
 						<div class="has-float-label">
 							<input type="text" id="blank-placeholder1" class="form-control" placeholder="">
-							<label for="blank-placeholder1">Blank placeholder attr</label>
+							<label for="blank-placeholder1">Last Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
 							<input type="text" id="blank-placeholder2" class="form-control" placeholder="" disabled>
-							<label for="blank-placeholder2">Blank placeholder attr</label>
+							<label for="blank-placeholder2">Last Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
 							<input type="text" id="blank-placeholder3" class="form-control" placeholder="" readonly>
-							<label for="blank-placeholder3">Blank placeholder attr</label>
+							<label for="blank-placeholder3">Last Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<input type="text" id="blank-placeholder4" class="form-control" placeholder="" value="Value filled out">
-							<label for="blank-placeholder4">Blank placeholder attr (with value)</label>
+							<input type="text" id="blank-placeholder4" class="form-control" placeholder="" value="Smith">
+							<label for="blank-placeholder4">Last Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<input type="text" id="blank-placeholder5" class="form-control" placeholder="" value="Value filled out" disabled>
-							<label for="blank-placeholder5">Blank placeholder attr (with value)</label>
+							<input type="text" id="blank-placeholder5" class="form-control" placeholder="" value="Smith" disabled>
+							<label for="blank-placeholder5">Last Name</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<input type="text" id="blank-placeholder6" class="form-control" placeholder="" value="Value filled out" readonly>
-							<label for="blank-placeholder6">Blank placeholder attr (with value)</label>
+							<input type="text" id="blank-placeholder6" class="form-control" placeholder="" value="Smith" readonly>
+							<label for="blank-placeholder6">Last Name</label>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">textarea</div>
+					<div class="col">
 						<div class="has-float-label">
-							<select class="form-control" id="select-element1">
+							<textarea id="textarea-element1" class="form-control" placeholder="." rows="3"></textarea>
+							<label for="textarea-element1">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="textarea-element2" class="form-control" placeholder="." rows="3" disabled></textarea>
+							<label for="textarea-element2">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="textarea-element3" class="form-control" placeholder="." rows="3" readonly></textarea>
+							<label for="textarea-element3">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="textarea-element4" class="form-control" placeholder="." rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="textarea-element4">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="textarea-element5" class="form-control" placeholder="." rows="3" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="textarea-element5">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="textarea-element6" class="form-control" placeholder="." rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="textarea-element6">Comments</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">textarea [required]</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="textarea-element-required1" class="form-control" placeholder="." required rows="3"></textarea>
+							<label for="textarea-element-required1">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="textarea-element-required2" class="form-control" placeholder="." required rows="3" disabled></textarea>
+							<label for="textarea-element-required2">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="textarea-element-required3" class="form-control" placeholder="." required rows="3" readonly></textarea>
+							<label for="textarea-element-required3">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="textarea-element-required4" class="form-control" placeholder="." required rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="textarea-element-required4">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="textarea-element-required5" class="form-control" placeholder="." required rows="3" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="textarea-element-required5">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="textarea-element-required6" class="form-control" placeholder="." required rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="textarea-element-required6">Comments</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">select</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="select-element1">
 								<option selected disabled>- SELECT -</option>
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
@@ -470,11 +597,9 @@
 							<label for="select-element1">Department</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<select class="form-control" id="select-element2" disabled>
+							<select class="form-select" id="select-element2" disabled>
 								<option selected disabled>- SELECT -</option>
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
@@ -487,12 +612,10 @@
 							<label for="select-element2">Department</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2 text-muted">deprecated</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+					<div class="col">
 						<div class="has-float-label">
-							<select class="form-control" id="select-element4">
+							<select class="form-select" id="select-element4">
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
 								<option value="3">Web Developer</option>
@@ -504,11 +627,9 @@
 							<label for="select-element4">Department</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<select class="form-control" id="select-element5" disabled>
+							<select class="form-select" id="select-element5" disabled>
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
 								<option value="3">Web Developer</option>
@@ -520,13 +641,14 @@
 							<label for="select-element5">Department</label>
 						</div>
 					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
 				</div>
-				<div class="col-4 col-md-2 text-muted">deprecated</div>
 
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">select [required]</div>
+					<div class="col">
 						<div class="has-float-label">
-							<select class="form-control" id="select-element-required1" required>
+							<select class="form-select" id="select-element-required1" required>
 								<option selected disabled>- SELECT -</option>
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
@@ -539,11 +661,9 @@
 							<label for="select-element-required1">Department</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<select class="form-control" id="select-element-required2" required disabled>
+							<select class="form-select" id="select-element-required2" required disabled>
 								<option selected disabled>- SELECT -</option>
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
@@ -556,12 +676,10 @@
 							<label for="select-element-required2">Department</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2 text-muted">deprecated</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+					<div class="col">
 						<div class="has-float-label">
-							<select class="form-control" id="select-element-required4" required>
+							<select class="form-select" id="select-element-required4" required>
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
 								<option value="3">Web Developer</option>
@@ -573,11 +691,9 @@
 							<label for="select-element-required4">Department</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<select class="form-control" id="select-element-required5" required disabled>
+							<select class="form-select" id="select-element-required5" required disabled>
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
 								<option value="3">Web Developer</option>
@@ -589,13 +705,1364 @@
 							<label for="select-element-required5">Department</label>
 						</div>
 					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
 				</div>
-				<div class="col-4 col-md-2 text-muted">deprecated</div>
 
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">select [multiple]</div>
+					<div class="col">
 						<div class="has-float-label">
-							<select class="form-control select2" id="select2-element1">
+							<select class="form-select" id="select-element-multiple1" size="4" multiple>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-multiple1">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="select-element-multiple2" size="4" multiple disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-multiple2">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="select-element-multiple4" size="4" multiple>
+								<option value="1" selected>Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3" selected>Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-multiple4">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="select-element-multiple5" size="4" multiple disabled>
+								<option value="1" selected>Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3" selected>Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-multiple5">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">select [multiple][required]</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="select-element-multiple-required1" size="4" required multiple>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-multiple-required1">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="select-element-multiple-required2" size="4" required multiple disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-multiple-required2">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="select-element-multiple-required4" size="4" required multiple>
+								<option value="1" selected>Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3" selected>Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-multiple-required4">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="select-element-multiple-required5" size="4" required multiple disabled>
+								<option value="1" selected>Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3" selected>Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="select-element-multiple-required5">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+				</div>
+			</div>
+
+			<div class="container-fluid mt-5">
+				<h2>Tests <small class="fst-italic opacity-50">(Bootstrap 5)</small></h2>
+
+				<div class="row bg-dark text-white py-3">
+					<div class="col fw-bold"></div>
+					<div class="col fw-bold">blank</div>
+					<div class="col fw-bold">blank, disabled</div>
+					<div class="col fw-bold">blank, readonly</div>
+					<div class="col fw-bold">has value</div>
+					<div class="col fw-bold">has value, disabled</div>
+					<div class="col fw-bold">has value, readonly</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input (sm)</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-sm-type-text1" class="form-control form-control-sm" placeholder=".">
+							<label for="bootstrap5-sm-type-text1">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-sm-type-text2" class="form-control form-control-sm" placeholder="." disabled>
+							<label for="bootstrap5-sm-type-text2">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-sm-type-text3" class="form-control form-control-sm" placeholder="." readonly>
+							<label for="bootstrap5-sm-type-text3">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-sm-type-text4" class="form-control form-control-sm" placeholder="." value="John Smith">
+							<label for="bootstrap5-sm-type-text4">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-sm-type-text5" class="form-control form-control-sm" placeholder="." value="John Smith" disabled>
+							<label for="bootstrap5-sm-type-text5">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-sm-type-text6" class="form-control form-control-sm" placeholder="." value="John Smith" readonly>
+							<label for="bootstrap5-sm-type-text6">Full Name</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input (sm) [required]</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-sm-type-text-required1" class="form-control form-control-sm" placeholder="." required>
+							<label for="bootstrap5-sm-type-text-required1">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-sm-type-text-required2" class="form-control form-control-sm" placeholder="." required disabled>
+							<label for="bootstrap5-sm-type-text-required2">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-sm-type-text-required3" class="form-control form-control-sm" placeholder="." required readonly>
+							<label for="bootstrap5-sm-type-text-required3">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-sm-type-text-required4" class="form-control form-control-sm" placeholder="." required value="John Smith">
+							<label for="bootstrap5-sm-type-text-required4">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-sm-type-text-required5" class="form-control form-control-sm" placeholder="." required value="John Smith" disabled>
+							<label for="bootstrap5-sm-type-text-required5">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-sm-type-text-required6" class="form-control form-control-sm" placeholder="." required value="John Smith" readonly>
+							<label for="bootstrap5-sm-type-text-required6">Full Name</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-type-text1" class="form-control" placeholder=".">
+							<label for="bootstrap5-type-text1">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-type-text2" class="form-control" placeholder="." disabled>
+							<label for="bootstrap5-type-text2">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-type-text3" class="form-control" placeholder="." readonly>
+							<label for="bootstrap5-type-text3">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-type-text4" class="form-control" placeholder="." value="John Smith">
+							<label for="bootstrap5-type-text4">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-type-text5" class="form-control" placeholder="." value="John Smith" disabled>
+							<label for="bootstrap5-type-text5">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-type-text6" class="form-control" placeholder="." value="John Smith" readonly>
+							<label for="bootstrap5-type-text6">Full Name</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input [required]</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-type-text-required1" class="form-control" placeholder="." required>
+							<label for="bootstrap5-type-text-required1">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-type-text-required2" class="form-control" placeholder="." required disabled>
+							<label for="bootstrap5-type-text-required2">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-type-text-required3" class="form-control" placeholder="." required readonly>
+							<label for="bootstrap5-type-text-required3">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-type-text-required4" class="form-control" placeholder="." required value="John Smith">
+							<label for="bootstrap5-type-text-required4">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-type-text-required5" class="form-control" placeholder="." required value="John Smith" disabled>
+							<label for="bootstrap5-type-text-required5">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-type-text-required6" class="form-control" placeholder="." required value="John Smith" readonly>
+							<label for="bootstrap5-type-text-required6">Full Name</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input (lg)</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-lg-type-text1" class="form-control form-control-lg" placeholder=".">
+							<label for="bootstrap5-lg-type-text1">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-lg-type-text2" class="form-control form-control-lg" placeholder="." disabled>
+							<label for="bootstrap5-lg-type-text2">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-lg-type-text3" class="form-control form-control-lg" placeholder="." readonly>
+							<label for="bootstrap5-lg-type-text3">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-lg-type-text4" class="form-control form-control-lg" placeholder="." value="John Smith">
+							<label for="bootstrap5-lg-type-text4">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-lg-type-text5" class="form-control form-control-lg" placeholder="." value="John Smith" disabled>
+							<label for="bootstrap5-lg-type-text5">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-lg-type-text6" class="form-control form-control-lg" placeholder="." value="John Smith" readonly>
+							<label for="bootstrap5-lg-type-text6">Full Name</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input (lg) [required]</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-lg-type-text-required1" class="form-control form-control-lg" placeholder="." required>
+							<label for="bootstrap5-lg-type-text-required1">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-lg-type-text-required2" class="form-control form-control-lg" placeholder="." required disabled>
+							<label for="bootstrap5-lg-type-text-required2">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-lg-type-text-required3" class="form-control form-control-lg" placeholder="." required readonly>
+							<label for="bootstrap5-lg-type-text-required3">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-lg-type-text-required4" class="form-control form-control-lg" placeholder="." required value="John Smith">
+							<label for="bootstrap5-lg-type-text-required4">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-lg-type-text-required5" class="form-control form-control-lg" placeholder="." required value="John Smith" disabled>
+							<label for="bootstrap5-lg-type-text-required5">Full Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-lg-type-text-required6" class="form-control form-control-lg" placeholder="." required value="John Smith" readonly>
+							<label for="bootstrap5-lg-type-text-required6">Full Name</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input (placeholder blank)</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-no-placeholder1" class="form-control">
+							<label for="bootstrap5-no-placeholder1">Last Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-no-placeholder2" class="form-control" disabled>
+							<label for="bootstrap5-no-placeholder2">Last Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-no-placeholder3" class="form-control" readonly>
+							<label for="bootstrap5-no-placeholder3">Last Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-no-placeholder4" class="form-control" value="Smith">
+							<label for="bootstrap5-no-placeholder4">Last Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-no-placeholder5" class="form-control" value="Smith" disabled>
+							<label for="bootstrap5-no-placeholder5">Last Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-no-placeholder6" class="form-control" value="Smith" readonly>
+							<label for="bootstrap5-no-placeholder6">Last Name</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input (no placeholder)</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-blank-placeholder1" class="form-control" placeholder="">
+							<label for="bootstrap5-blank-placeholder1">Last Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-blank-placeholder2" class="form-control" placeholder="" disabled>
+							<label for="bootstrap5-blank-placeholder2">Last Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-blank-placeholder3" class="form-control" placeholder="" readonly>
+							<label for="bootstrap5-blank-placeholder3">Last Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-blank-placeholder4" class="form-control" placeholder="" value="Smith">
+							<label for="bootstrap5-blank-placeholder4">Last Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-blank-placeholder5" class="form-control" placeholder="" value="Smith" disabled>
+							<label for="bootstrap5-blank-placeholder5">Last Name</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<input type="text" id="bootstrap5-blank-placeholder6" class="form-control" placeholder="" value="Smith" readonly>
+							<label for="bootstrap5-blank-placeholder6">Last Name</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">textarea</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="bootstrap5-textarea-element1" class="form-control" placeholder="." rows="3"></textarea>
+							<label for="bootstrap5-textarea-element1">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="bootstrap5-textarea-element2" class="form-control" placeholder="." rows="3" disabled></textarea>
+							<label for="bootstrap5-textarea-element2">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="bootstrap5-textarea-element3" class="form-control" placeholder="." rows="3" readonly></textarea>
+							<label for="bootstrap5-textarea-element3">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="bootstrap5-textarea-element4" class="form-control" placeholder="." rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="bootstrap5-textarea-element4">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="bootstrap5-textarea-element5" class="form-control" placeholder="." rows="3" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="bootstrap5-textarea-element5">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="bootstrap5-textarea-element6" class="form-control" placeholder="." rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="bootstrap5-textarea-element6">Comments</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">textarea [required]</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="bootstrap5-textarea-element-required1" class="form-control" placeholder="." required rows="3"></textarea>
+							<label for="bootstrap5-textarea-element-required1">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="bootstrap5-textarea-element-required2" class="form-control" placeholder="." required rows="3" disabled></textarea>
+							<label for="bootstrap5-textarea-element-required2">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="bootstrap5-textarea-element-required3" class="form-control" placeholder="." required rows="3" readonly></textarea>
+							<label for="bootstrap5-textarea-element-required3">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="bootstrap5-textarea-element-required4" class="form-control" placeholder="." required rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="bootstrap5-textarea-element-required4">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="bootstrap5-textarea-element-required5" class="form-control" placeholder="." required rows="3" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="bootstrap5-textarea-element-required5">Comments</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<textarea id="bootstrap5-textarea-element-required6" class="form-control" placeholder="." required rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus nibh, ullamcorper ut tellus scelerisque, condimentum suscipit neque. Proin feugiat ipsum eu erat mollis auctor. Sed nec risus et felis dictum semper ut vel justo. Nunc non mi eu ipsum gravida tincidunt non quis dolor. Aenean vehicula ornare arcu sit amet bibendum. Integer congue pellentesque lectus, et tincidunt tortor consequat ac. Donec tristique est iaculis congue consectetur. Nullam laoreet sagittis erat. Cras sodales lorem non ex vulputate, vel egestas lectus volutpat. Ut consequat hendrerit dolor eu condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</textarea>
+							<label for="bootstrap5-textarea-element-required6">Comments</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">select (sm)</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select form-select-sm" id="bootstrap5-sm-select-element1">
+								<option selected disabled>- SELECT -</option>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-sm-select-element1">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select form-select-sm" id="bootstrap5-sm-select-element2" disabled>
+								<option selected disabled>- SELECT -</option>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-sm-select-element2">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select form-select-sm" id="bootstrap5-sm-select-element4">
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-sm-select-element4">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select form-select-sm" id="bootstrap5-sm-select-element5" disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-sm-select-element5">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">select (sm) [required]</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select form-select-sm" id="bootstrap5-sm-select-element-required1" required>
+								<option selected disabled>- SELECT -</option>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-sm-select-element-required1">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select form-select-sm" id="bootstrap5-sm-select-element-required2" required disabled>
+								<option selected disabled>- SELECT -</option>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-sm-select-element-required2">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select form-select-sm" id="bootstrap5-sm-select-element-required4" required>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-sm-select-element-required4">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select form-select-sm" id="bootstrap5-sm-select-element-required5" required disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-sm-select-element-required5">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">select</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="bootstrap5-select-element1">
+								<option selected disabled>- SELECT -</option>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-select-element1">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="bootstrap5-select-element2" disabled>
+								<option selected disabled>- SELECT -</option>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-select-element2">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="bootstrap5-select-element4">
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-select-element4">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="bootstrap5-select-element5" disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-select-element5">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">select [required]</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="bootstrap5-select-element-required1" required>
+								<option selected disabled>- SELECT -</option>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-select-element-required1">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="bootstrap5-select-element-required2" required disabled>
+								<option selected disabled>- SELECT -</option>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-select-element-required2">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="bootstrap5-select-element-required4" required>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-select-element-required4">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="bootstrap5-select-element-required5" required disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-select-element-required5">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">select (lg)</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select form-select-lg" id="bootstrap5-lg-select-element1">
+								<option selected disabled>- SELECT -</option>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-lg-select-element1">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select form-select-lg" id="bootstrap5-lg-select-element2" disabled>
+								<option selected disabled>- SELECT -</option>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-lg-select-element2">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select form-select-lg" id="bootstrap5-lg-select-element4">
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-lg-select-element4">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select form-select-lg" id="bootstrap5-lg-select-element5" disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-lg-select-element5">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">select (lg) [required]</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select form-select-lg" id="bootstrap5-lg-select-element-required1" required>
+								<option selected disabled>- SELECT -</option>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-lg-select-element-required1">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select form-select-lg" id="bootstrap5-lg-select-element-required2" required disabled>
+								<option selected disabled>- SELECT -</option>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-lg-select-element-required2">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select form-select-lg" id="bootstrap5-lg-select-element-required4" required>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-lg-select-element-required4">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select form-select-lg" id="bootstrap5-lg-select-element-required5" required disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4" selected>UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-lg-select-element-required5">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">select [multiple]</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="bootstrap5-select-element-multiple1" size="4" multiple>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-select-element-multiple1">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="bootstrap5-select-element-multiple2" size="4" multiple disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-select-element-multiple2">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="bootstrap5-select-element-multiple4" size="4" multiple>
+								<option value="1" selected>Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3" selected>Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-select-element-multiple4">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="bootstrap5-select-element-multiple5" size="4" multiple disabled>
+								<option value="1" selected>Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3" selected>Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-select-element-multiple5">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">select [multiple][required]</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="bootstrap5-select-element-multiple-required1" size="4" required multiple>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-select-element-multiple-required1">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="bootstrap5-select-element-multiple-required2" size="4" required multiple disabled>
+								<option value="1">Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3">Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-select-element-multiple-required2">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="bootstrap5-select-element-multiple-required4" size="4" required multiple>
+								<option value="1" selected>Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3" selected>Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-select-element-multiple-required4">Department</label>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select" id="bootstrap5-select-element-multiple-required5" size="4" required multiple disabled>
+								<option value="1" selected>Web Designer</option>
+								<option value="2">UX Designer</option>
+								<option value="3" selected>Web Developer</option>
+								<option value="4">UI Developer</option>
+								<option value="5">Backend Developer</option>
+								<option value="6">QA Tester</option>
+								<option value="7">Project Manager</option>
+							</select>
+							<label for="bootstrap5-select-element-multiple-required5">Department</label>
+						</div>
+					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+				</div>
+			</div>
+
+			<div class="container-fluid mt-5">
+				<h2>Tests <small class="fst-italic opacity-50">(Bootstrap 5) - input groups</small></h2>
+
+				<div class="row bg-dark text-white py-3">
+					<div class="col fw-bold"></div>
+					<div class="col fw-bold">blank</div>
+					<div class="col fw-bold">blank, disabled</div>
+					<div class="col fw-bold">blank, readonly</div>
+					<div class="col fw-bold">has value</div>
+					<div class="col fw-bold">has value, disabled</div>
+					<div class="col fw-bold">has value, readonly</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input (sm)</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-sm-type-text1" class="form-control form-control-sm" placeholder=".">
+							<label for="bootstrap5-sm-type-text1">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-sm-type-text2" class="form-control form-control-sm" placeholder="." disabled>
+							<label for="bootstrap5-sm-type-text2">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-sm-type-text3" class="form-control form-control-sm" placeholder="." readonly>
+							<label for="bootstrap5-sm-type-text3">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-sm-type-text4" class="form-control form-control-sm" placeholder="." value="John Smith">
+							<label for="bootstrap5-sm-type-text4">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-sm-type-text5" class="form-control form-control-sm" placeholder="." value="John Smith" disabled>
+							<label for="bootstrap5-sm-type-text5">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-sm-type-text6" class="form-control form-control-sm" placeholder="." value="John Smith" readonly>
+							<label for="bootstrap5-sm-type-text6">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input (sm) [required]</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-sm-type-text-required1" class="form-control form-control-sm" placeholder="." required>
+							<label for="bootstrap5-sm-type-text-required1">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-sm-type-text-required2" class="form-control form-control-sm" placeholder="." required disabled>
+							<label for="bootstrap5-sm-type-text-required2">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-sm-type-text-required3" class="form-control form-control-sm" placeholder="." required readonly>
+							<label for="bootstrap5-sm-type-text-required3">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-sm-type-text-required4" class="form-control form-control-sm" placeholder="." required value="John Smith">
+							<label for="bootstrap5-sm-type-text-required4">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-sm-type-text-required5" class="form-control form-control-sm" placeholder="." required value="John Smith" disabled>
+							<label for="bootstrap5-sm-type-text-required5">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-sm-type-text-required6" class="form-control form-control-sm" placeholder="." required value="John Smith" readonly>
+							<label for="bootstrap5-sm-type-text-required6">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-type-text1" class="form-control" placeholder=".">
+							<label for="bootstrap5-type-text1">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-type-text2" class="form-control" placeholder="." disabled>
+							<label for="bootstrap5-type-text2">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-type-text3" class="form-control" placeholder="." readonly>
+							<label for="bootstrap5-type-text3">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-type-text4" class="form-control" placeholder="." value="John Smith">
+							<label for="bootstrap5-type-text4">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-type-text5" class="form-control" placeholder="." value="John Smith" disabled>
+							<label for="bootstrap5-type-text5">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-type-text6" class="form-control" placeholder="." value="John Smith" readonly>
+							<label for="bootstrap5-type-text6">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input [required]</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-type-text-required1" class="form-control" placeholder="." required>
+							<label for="bootstrap5-type-text-required1">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-type-text-required2" class="form-control" placeholder="." required disabled>
+							<label for="bootstrap5-type-text-required2">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-type-text-required3" class="form-control" placeholder="." required readonly>
+							<label for="bootstrap5-type-text-required3">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-type-text-required4" class="form-control" placeholder="." required value="John Smith">
+							<label for="bootstrap5-type-text-required4">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-type-text-required5" class="form-control" placeholder="." required value="John Smith" disabled>
+							<label for="bootstrap5-type-text-required5">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-type-text-required6" class="form-control" placeholder="." required value="John Smith" readonly>
+							<label for="bootstrap5-type-text-required6">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input (lg)</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-lg-type-text1" class="form-control form-control-lg" placeholder=".">
+							<label for="bootstrap5-lg-type-text1">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-lg-type-text2" class="form-control form-control-lg" placeholder="." disabled>
+							<label for="bootstrap5-lg-type-text2">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-lg-type-text3" class="form-control form-control-lg" placeholder="." readonly>
+							<label for="bootstrap5-lg-type-text3">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-lg-type-text4" class="form-control form-control-lg" placeholder="." value="John Smith">
+							<label for="bootstrap5-lg-type-text4">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-lg-type-text5" class="form-control form-control-lg" placeholder="." value="John Smith" disabled>
+							<label for="bootstrap5-lg-type-text5">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-lg-type-text6" class="form-control form-control-lg" placeholder="." value="John Smith" readonly>
+							<label for="bootstrap5-lg-type-text6">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">input (lg) [required]</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-lg-type-text-required1" class="form-control form-control-lg" placeholder="." required>
+							<label for="bootstrap5-lg-type-text-required1">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-lg-type-text-required2" class="form-control form-control-lg" placeholder="." required disabled>
+							<label for="bootstrap5-lg-type-text-required2">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-lg-type-text-required3" class="form-control form-control-lg" placeholder="." required readonly>
+							<label for="bootstrap5-lg-type-text-required3">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-lg-type-text-required4" class="form-control form-control-lg" placeholder="." required value="John Smith">
+							<label for="bootstrap5-lg-type-text-required4">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-lg-type-text-required5" class="form-control form-control-lg" placeholder="." required value="John Smith" disabled>
+							<label for="bootstrap5-lg-type-text-required5">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+					<div class="col">
+						<div class="has-float-label input-group">
+							<input type="text" id="bootstrap5-lg-type-text-required6" class="form-control form-control-lg" placeholder="." required value="John Smith" readonly>
+							<label for="bootstrap5-lg-type-text-required6">Full Name</label>
+							<button class="btn btn-primary">Button</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid mt-5">
+				<h2>Tests <small class="fst-italic opacity-50">(Select2)</small></h2>
+
+				<div class="row bg-dark text-white py-3">
+					<div class="col fw-bold"></div>
+					<div class="col fw-bold">blank</div>
+					<div class="col fw-bold">blank, disabled</div>
+					<div class="col fw-bold">blank, readonly</div>
+					<div class="col fw-bold">has value</div>
+					<div class="col fw-bold">has value, disabled</div>
+					<div class="col fw-bold">has value, readonly</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">Select2</div>
+					<div class="col">
+						<div class="has-float-label">
+							<select class="form-select select2" id="select2-element1">
 								<option></option>
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
@@ -608,11 +2075,9 @@
 							<label for="select2-element1">Department</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<select class="form-control select2" id="select2-element2" disabled>
+							<select class="form-select select2" id="select2-element2" disabled>
 								<option></option>
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
@@ -625,12 +2090,10 @@
 							<label for="select2-element2">Department</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2 text-muted">deprecated</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+					<div class="col">
 						<div class="has-float-label">
-							<select class="form-control select2" id="select2-element4">
+							<select class="form-select select2" id="select2-element4">
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
 								<option value="3">Web Developer</option>
@@ -642,11 +2105,9 @@
 							<label for="select2-element4">Department</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<select class="form-control select2" id="select2-element5" disabled>
+							<select class="form-select select2" id="select2-element5" disabled>
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
 								<option value="3">Web Developer</option>
@@ -658,13 +2119,14 @@
 							<label for="select2-element5">Department</label>
 						</div>
 					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
 				</div>
-				<div class="col-4 col-md-2 text-muted">deprecated</div>
 
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+				<div class="row mt-3">
+					<div class="col bg-danger text-white">Select2 [required]</div>
+					<div class="col">
 						<div class="has-float-label">
-							<select class="form-control select2" id="select2-element-required1" required>
+							<select class="form-select select2" id="select2-element-required1" required>
 								<option></option>
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
@@ -677,11 +2139,9 @@
 							<label for="select2-element-required1">Department</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<select class="form-control select2" id="select2-element-required2" required disabled>
+							<select class="form-select select2" id="select2-element-required2" required disabled>
 								<option></option>
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
@@ -694,12 +2154,10 @@
 							<label for="select2-element-required2">Department</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2 text-muted">deprecated</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
+					<div class="col">
 						<div class="has-float-label">
-							<select class="form-control select2" id="select2-element-required4" required>
+							<select class="form-select select2" id="select2-element-required4" required>
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
 								<option value="3">Web Developer</option>
@@ -711,11 +2169,9 @@
 							<label for="select2-element-required4">Department</label>
 						</div>
 					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
+					<div class="col">
 						<div class="has-float-label">
-							<select class="form-control select2" id="select2-element-required5" required disabled>
+							<select class="form-select select2" id="select2-element-required5" required disabled>
 								<option value="1">Web Designer</option>
 								<option value="2">UX Designer</option>
 								<option value="3">Web Developer</option>
@@ -727,173 +2183,35 @@
 							<label for="select2-element-required5">Department</label>
 						</div>
 					</div>
+					<div class="col opacity-50">deprecated<a target="_blank" href="https://html.com/attributes/select-readonly/"><i class="fas fa-question-circle ms-2"></i></a></div>
 				</div>
-				<div class="col-4 col-md-2 text-muted">deprecated</div>
-
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<select class="form-control" id="select-element-multiple1" size="4" multiple>
-								<option value="1">Web Designer</option>
-								<option value="2">UX Designer</option>
-								<option value="3">Web Developer</option>
-								<option value="4">UI Developer</option>
-								<option value="5">Backend Developer</option>
-								<option value="6">QA Tester</option>
-								<option value="7">Project Manager</option>
-							</select>
-							<label for="select-element-multiple1">Department</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<select class="form-control" id="select-element-multiple2" size="4" multiple disabled>
-								<option value="1">Web Designer</option>
-								<option value="2">UX Designer</option>
-								<option value="3">Web Developer</option>
-								<option value="4">UI Developer</option>
-								<option value="5">Backend Developer</option>
-								<option value="6">QA Tester</option>
-								<option value="7">Project Manager</option>
-							</select>
-							<label for="select-element-multiple2">Department</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2 text-muted">deprecated</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<select class="form-control" id="select-element-multiple4" size="4" multiple>
-								<option value="1" selected>Web Designer</option>
-								<option value="2">UX Designer</option>
-								<option value="3" selected>Web Developer</option>
-								<option value="4">UI Developer</option>
-								<option value="5">Backend Developer</option>
-								<option value="6">QA Tester</option>
-								<option value="7">Project Manager</option>
-							</select>
-							<label for="select-element-multiple4">Department</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<select class="form-control" id="select-element-multiple5" size="4" multiple disabled>
-								<option value="1" selected>Web Designer</option>
-								<option value="2">UX Designer</option>
-								<option value="3" selected>Web Developer</option>
-								<option value="4">UI Developer</option>
-								<option value="5">Backend Developer</option>
-								<option value="6">QA Tester</option>
-								<option value="7">Project Manager</option>
-							</select>
-							<label for="select-element-multiple5">Department</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2 text-muted">deprecated</div>
-
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<select class="form-control" id="select-element-multiple-required1" size="4" required multiple>
-								<option value="1">Web Designer</option>
-								<option value="2">UX Designer</option>
-								<option value="3">Web Developer</option>
-								<option value="4">UI Developer</option>
-								<option value="5">Backend Developer</option>
-								<option value="6">QA Tester</option>
-								<option value="7">Project Manager</option>
-							</select>
-							<label for="select-element-multiple-required1">Department</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<select class="form-control" id="select-element-multiple-required2" size="4" required multiple disabled>
-								<option value="1">Web Designer</option>
-								<option value="2">UX Designer</option>
-								<option value="3">Web Developer</option>
-								<option value="4">UI Developer</option>
-								<option value="5">Backend Developer</option>
-								<option value="6">QA Tester</option>
-								<option value="7">Project Manager</option>
-							</select>
-							<label for="select-element-multiple-required2">Department</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2 text-muted">deprecated</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<select class="form-control" id="select-element-multiple-required4" size="4" required multiple>
-								<option value="1" selected>Web Designer</option>
-								<option value="2">UX Designer</option>
-								<option value="3" selected>Web Developer</option>
-								<option value="4">UI Developer</option>
-								<option value="5">Backend Developer</option>
-								<option value="6">QA Tester</option>
-								<option value="7">Project Manager</option>
-							</select>
-							<label for="select-element-multiple-required4">Department</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2">
-					<div class="form-group">
-						<div class="has-float-label">
-							<select class="form-control" id="select-element-multiple-required5" size="4" required multiple disabled>
-								<option value="1" selected>Web Designer</option>
-								<option value="2">UX Designer</option>
-								<option value="3" selected>Web Developer</option>
-								<option value="4">UI Developer</option>
-								<option value="5">Backend Developer</option>
-								<option value="6">QA Tester</option>
-								<option value="7">Project Manager</option>
-							</select>
-							<label for="select-element-multiple-required5">Department</label>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 col-md-2 text-muted">deprecated</div>
-
-
 			</div>
 		</div>
 
 		<footer>
 			<div class="d-lg-flex">
 				<div class="d-block d-md-inline-block mb-3 mb-md-0">
-					<a href="https://adamculpepper.github.io/pure-css-float-labels">Pure CSS Float Labels</a>
+					<a href="https://floatlabels.com">Pure CSS Float Labels</a>
 				</div>
-				<span class="ml-2 hidden-sm-down">is</span>
-				<span class="ml-2"><i class="fas fa-code"></i><span class="sr-only">built</span></span>
-				<span class="ml-2">with</span>
-				<span class="ml-2"><i class="fas fa-heart"></i><span class="sr-only">love</span></span>
-				<span class="ml-2">by</span>
-				<a class="ml-1" target="_blank" rel="referrer nofollow" href="http://adamculpepper.net"><img class="rounded-circle" src="https://cdn.louisianagroups.com/assets/img/adam.jpg" alt="Contributor"></a>
-				<div class="d-block d-lg-inline-block mt-3 mt-lg-0 ml-auto">
-					<a target="_blank" href="https://github.com/adamculpepper/pure-css-float-labels">edit this page<i class="fab fa-github ml-2"></i></a>
+				<span class="ms-2 hidden-sm-down">is</span>
+				<span class="ms-2"><i class="fas fa-code"></i><span class="sr-only">built</span></span>
+				<span class="ms-2">with</span>
+				<span class="ms-2"><i class="fas fa-heart"></i><span class="sr-only">love</span></span>
+				<span class="ms-2">by</span>
+				<a class="ms-1" target="_blank" rel="referrer nofollow" href="http://adamculpepper.net"><img class="rounded-circle" src="https://cdn.louisianagroups.com/assets/img/adam.jpg" alt="Contributor"></a>
+				<div class="d-block d-lg-inline-block mt-3 mt-lg-0 ms-auto">
+					<a target="_blank" href="https://github.com/adamculpepper/pure-css-float-labels">edit this page<i class="fab fa-github ms-2"></i></a>
 				</div>
 			</div>
 		</footer>
 
-		<!--
-		<script async src="https://googletagmanager.com/gtag/js?id=UA-450952-13"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7C8BR3T0LJ"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
-			gtag('config', 'UA-450952-13');
+			gtag('config', 'G-7C8BR3T0LJ');
 		</script>
- 		-->
 
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/prism.js"></script>

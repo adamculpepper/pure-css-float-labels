@@ -9,11 +9,11 @@ a:hover {text-decoration:none;}
 /* Content Styles */
 header, footer {background:#eee; padding:20px;}
 header, header a,
-footer, footer a {color:rgba(0, 0, 0, 0.7);}
+footer, footer a {color:rgba(0, 0, 0, 0.7); text-decoration:none;}
 header a, footer a {display:inline-flex; align-items:center; justify-content:center; padding:5px 10px; background:rgba(0, 0, 0, 0.07);}
 header a:hover, footer a:hover {color:#222; background:rgba(0, 0, 0, 0.20);}
 
-footer {font-size:25px;}
+footer {margin-top:15px; font-size:25px;}
 footer > div {align-items:center; justify-content:center;}
 
 /* Sticky Footer */
@@ -22,3 +22,6 @@ body {display:flex; flex-direction:column;}
 footer {flex-shrink:0;}
 
 code {font-size:0.8rem!important;}
+
+.opacity-50 {opacity:0.50;}
+.opacity-25 {opacity:0.25;}
